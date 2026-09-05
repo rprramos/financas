@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Anota Aí — Controle Financeiro por Voz</title>
+  
+  <!-- PWA Meta Tags -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#0B0F19">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Icons (Lucide Icons via CDN) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- App Container -->
+  <div id="app-container" class="app-container">
+    
+    <!-- Top Bar Header -->
+    <header class="app-header">
+      <div class="logo-area">
+        <span class="logo-dot"></span>
+        <h1 class="logo-title">Anota Aí</h1>
+      </div>
+      <div class="header-actions">
+        <button id="btn-quick-voice" class="btn-icon header-mic-btn" title="Falar Lançamento">
+          <i data-lucide="mic"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main id="main-content" class="main-content">
+
+      <!-- ================= TAB: DASHBOARD ================= -->
+      <section id="tab-dashboard" class="tab-panel active">
+        <!-- Month Selector Carousel -->
+        <div class="month-selector">
+          <button id="btn-prev-month" class="btn-month-nav"><i data-lucide="chevron-left"></i></button>
+          <span id="label-current-month" class="current-month-label">Maio 2026</span>
+          <button id="btn-next-month" class="btn-month-nav"><i data-lucide="chevron-right"></i></button>
+        </div>
+
+        <!-- Hero Glass Cards Grid -->
+        <div class="summary-cards">
+          <!-- Total Balance -->
+          <div class="card glass balance-card animate-fade-in">
+            <div class="card-header">
+              <span class="card-label">Saldo Geral Líquido</span>
+              <div class="card-icon balance-icon"><i data-lucide="wallet"></i></div>
+            </div>
+            <div class="card-body">
+              <h2 id="val-net-balance" class="card-value">R$ 0,00</h2>
+              <div class="card-footer">
+                <span class="trend-badge positive" id="lbl-balance-trend">
+                  <i data-lucide="arrow-up-right"></i> <span id="val-balance-percentage">0%</span>
+                </span>
+                <span class="card-subtext">este mês</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Empresa Incomes & Expenses -->
+          <div class="card glass business-card animate-fade-in" style="animation-delay: 0.1s;">
+            <div class="card-header">
+              <span class="card-label">🏢 Fluxo Empresa</span>
+              <div class="card-icon business-icon"><i data-lucide="building-2"></i></div>
+            </div>
+            <div class="card-body">
+              <div class="sub-balance-row">
+                <div class="sub-balance-col">
+                  <span class="sub-label">Entradas (Trabalho)</span>
+                  <span id="val-empresa-in" class="sub-val text-green">R$ 0,00</span>
+                </div>
+                <div class="sub-balance-col">
+                  <span class="sub-label">Custos Empresa</span>
+                  <span id="val-empresa-out" class="sub-val text-red">R$ 0,00</span>
+                </div>
+              </div>
+              <div class="card-progress-bar">
+                <div id="bar-empresa-ratio" class="progress-fill green-fill" style="width: 0%;"></div>
+              </div>
+              <div class="card-footer">
+                <span class="card-subtext" id="lbl-empresa-result">Resultado: R$ 0,00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pessoal Expenses -->
+          <div class="card glass personal-card animate-fade-in" style="animation-delay: 0.2s;">
+            <div class="card-header">
+              <span class="card-label">👤 Gastos Pessoais</span>
+              <div class="card-icon personal-icon"><i data-lucide="user"></i></div>
+            </div>
+            <div class="card-body">
+              <h2 id="val-pessoal-out" class="card-value text-orange">R$ 0,00</h2>
+              <div class="card-footer">
+                <span class="trend-badge warning" id="lbl-pessoal-limit">
+                  <i data-lucide="alert-circle"></i> <span id="lbl-pessoal-limit-txt">Dentro do planejado</span>
+                </span>
+                <span class="card-subtext">total pago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Goal Progress Card -->
+        <div class="card glass goal-card animate-fade-in" style="animation-delay: 0.25s;">
+          <div class="card-header">
+            <span class="card-label">🎯 Meta de Faturamento</span>
+            <button id="btn-edit-goal" class="btn-text-edit" title="Editar Meta">
+              <i data-lucide="edit-3"></i> Editar
+            </button>
+          </div>
+          <div class="card-body">
+            <!-- Normal Mode -->
+            <div id="goal-view-mode" class="goal-display">
+              <div class="goal-info-row">
+                <div class="goal-info-col">
+                  <span class="sub-label">Faturamento Realizado</span>
+                  <span id="val-goal-revenue" class="goal-large-val text-green">R$ 0,00</span>
+                </div>
+                <div class="goal-info-col text-right">
+                  <span class="sub-label">Meta Estabelecida</span>
+                  <span id="val-goal-target" class="goal-large-val">R$ 0,00</span>
+                </div>
+              </div>
+              
+              <div class="card-progress-bar goal-progress-bar">
+                <div id="bar-goal-progress" class="progress-fill green-fill" style="width: 0%;"></div>
+              </div>
+              
+              <div class="card-footer goal-footer">
+                <span id="lbl-goal-status" class="trend-badge positive">
+                  <i data-lucide="check-circle"></i> <span id="val-goal-percent">0% atingido</span>
+                </span>
+                <span class="card-subtext" id="lbl-goal-remaining">Restam R$ 0,00 para bater a meta</span>
+              </div>
+            </div>
+            
+            <!-- Edit Mode Inline (Hidden by default) -->
+            <div id="goal-edit-mode" class="goal-editor hidden">
+              <div class="form-group">
+                <label for="input-goal-val">Nova Meta de Faturamento (R$)</label>
+                <div class="input-inline-row">
+                  <div class="input-val-container">
+                    <span class="currency-symbol">R$</span>
+                    <input type="number" step="100" id="input-goal-val" class="input-val" placeholder="Ex: 12000">
+                  </div>
+                  <button id="btn-save-goal" class="btn success btn-inline-save" type="button"><i data-lucide="check"></i></button>
+                  <button id="btn-cancel-goal" class="btn secondary btn-inline-cancel" type="button"><i data-lucide="x"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Obligations Priority Card -->
+        <div class="card glass obligations-card animate-fade-in" style="animation-delay: 0.3s;">
+          <div class="card-header">
+            <span class="card-label">⚖️ Prioridade de Pagamentos</span>
+            <div class="card-icon obligations-icon"><i data-lucide="scale"></i></div>
+          </div>
+          <div class="card-body" style="gap: var(--spacing-sm);">
+            
+            <!-- Empresa/PJ Sector -->
+            <div class="obligation-sector">
+              <h4 class="sector-title">🏢 Empresa (Custos PJ)</h4>
+              
+              <!-- PJ Fixos -->
+              <div class="obligation-block" id="btn-details-pj-fixed">
+                <div class="block-meta">
+                  <span class="block-name"><i data-lucide="lock" class="icon-fixed"></i> Custos Fixos (Obrigatórios)</span>
+                  <span id="val-pj-fixed-summary" class="block-values">R$ 0,00 / R$ 0,00</span>
+                </div>
+                <div class="card-progress-bar compact">
+                  <div id="bar-pj-fixed" class="progress-fill" style="width: 0%;"></div>
+                </div>
+                <div class="block-details">
+                  <span class="text-green" id="lbl-pj-fixed-paid">Pago: R$ 0,00</span>
+                  <span class="text-red" id="lbl-pj-fixed-pending">Pendente: R$ 0,00</span>
+                </div>
+              </div>
+              
+              <!-- PJ Variaveis -->
+              <div class="obligation-block" id="btn-details-pj-variable">
+                <div class="block-meta">
+                  <span class="block-name"><i data-lucide="unlock" class="icon-variable"></i> Custos Variáveis</span>
+                  <span id="val-pj-variable-summary" class="block-values">R$ 0,00 / R$ 0,00</span>
+                </div>
+                <div class="card-progress-bar compact">
+                  <div id="bar-pj-variable" class="progress-fill" style="width: 0%;"></div>
+                </div>
+                <div class="block-details">
+                  <span class="text-green" id="lbl-pj-variable-paid">Pago: R$ 0,00</span>
+                  <span class="text-red" id="lbl-pj-variable-pending">Pendente: R$ 0,00</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="sector-divider"></div>
+            
+            <!-- Pessoal/PF Sector -->
+            <div class="obligation-sector">
+              <h4 class="sector-title">👤 Pessoal (Custos PF)</h4>
+              
+              <!-- PF Fixos -->
+              <div class="obligation-block" id="btn-details-pf-fixed">
+                <div class="block-meta">
+                  <span class="block-name"><i data-lucide="lock" class="icon-fixed"></i> Custos Fixos (Obrigatórios)</span>
+                  <span id="val-pf-fixed-summary" class="block-values">R$ 0,00 / R$ 0,00</span>
+                </div>
+                <div class="card-progress-bar compact">
+                  <div id="bar-pf-fixed" class="progress-fill" style="width: 0%;"></div>
+                </div>
+                <div class="block-details">
+                  <span class="text-green" id="lbl-pf-fixed-paid">Pago: R$ 0,00</span>
+                  <span class="text-red" id="lbl-pf-fixed-pending">Pendente: R$ 0,00</span>
+                </div>
+              </div>
+              
+              <!-- PF Variaveis -->
+              <div class="obligation-block" id="btn-details-pf-variable">
+                <div class="block-meta">
+                  <span class="block-name"><i data-lucide="unlock" class="icon-variable"></i> Custos Variáveis</span>
+                  <span id="val-pf-variable-summary" class="block-values">R$ 0,00 / R$ 0,00</span>
+                </div>
+                <div class="card-progress-bar compact">
+                  <div id="bar-pf-variable" class="progress-fill" style="width: 0%;"></div>
+                </div>
+                <div class="block-details">
+                  <span class="text-green" id="lbl-pf-variable-paid">Pago: R$ 0,00</span>
+                  <span class="text-red" id="lbl-pf-variable-pending">Pendente: R$ 0,00</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Priority Notice Banner -->
+            <div id="banner-obligation-priority" class="priority-banner alert-warning hidden">
+              <i data-lucide="alert-triangle"></i>
+              <span id="lbl-priority-msg">Atenção: Você possui custos fixos obrigatórios pendentes!</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Interactive Charts Area -->
+        <div class="section-title-container">
+          <h3 class="section-title">Análise Financeira</h3>
+          <div class="chart-toggles">
+            <button id="btn-toggle-flow" class="btn-toggle active">Fluxo Mensal</button>
+            <button id="btn-toggle-categories" class="btn-toggle">Categorias</button>
+          </div>
+        </div>
+
+        <div class="card glass chart-card animate-fade-in">
+          <div id="chart-flow-container" class="chart-content">
+            <!-- SVG Flow Chart will be injected here -->
+            <div class="chart-fallback">
+              <svg id="svg-flow-chart" viewBox="0 0 500 200" width="100%" height="100%"></svg>
+            </div>
+          </div>
+          <div id="chart-categories-container" class="chart-content hidden">
+            <!-- Category Breakdowns list -->
+            <div id="category-progress-list" class="category-progress-list">
+              <!-- JS Injected Bars -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Transactions Area -->
+        <div class="section-title-container">
+          <h3 class="section-title">Lançamentos Recentes</h3>
+          <button id="btn-view-all-transactions" class="btn-text">Ver todos</button>
+        </div>
+
+        <div id="recent-transactions-list" class="recent-list animate-fade-in">
+          <!-- Recent transactions will be dynamically injected here -->
+        </div>
+      </section>
+
+      <!-- ================= TAB: DESPESAS FIXAS ================= -->
+      <section id="tab-fixos" class="tab-panel hidden">
+        <div class="fixos-header">
+          <h2 class="page-title">Despesas Fixas</h2>
+          <button id="btn-add-fixo" class="btn primary btn-add-fixo">
+            <i data-lucide="plus"></i> Adicionar
+          </button>
+        </div>
+
+        <!-- Summary Stats -->
+        <div class="fixos-summary-cards">
+          <div class="fixos-stat-card glass">
+            <span class="fixos-stat-label">Total Previsto</span>
+            <span id="fixos-total-previsto" class="fixos-stat-value">R$ 0,00</span>
+          </div>
+          <div class="fixos-stat-card glass fixos-stat-paid">
+            <span class="fixos-stat-label">Pago</span>
+            <span id="fixos-total-pago" class="fixos-stat-value text-green">R$ 0,00</span>
+          </div>
+          <div class="fixos-stat-card glass fixos-stat-pending">
+            <span class="fixos-stat-label">Pendente</span>
+            <span id="fixos-total-pendente" class="fixos-stat-value text-orange">R$ 0,00</span>
+          </div>
+        </div>
+
+        <!-- Month indicator -->
+        <div class="fixos-month-bar glass">
+          <i data-lucide="calendar"></i>
+          <span id="fixos-month-label">Maio 2026</span>
+          <span class="fixos-month-badge" id="fixos-progress-badge">0% pago</span>
+        </div>
+
+        <!-- Empresa Section -->
+        <div class="fixos-section" id="fixos-section-empresa">
+          <div class="fixos-section-header" id="fixos-section-empresa-toggle">
+            <div class="fixos-section-title">
+              <span class="fixos-section-icon">🏢</span>
+              <span>Empresa (Custos Fixos PJ)</span>
+            </div>
+            <div class="fixos-section-meta">
+              <span id="fixos-empresa-summary" class="fixos-section-summary">R$ 0 / R$ 0</span>
+              <i data-lucide="chevron-down" class="fixos-chevron"></i>
+            </div>
+          </div>
+          <div class="fixos-progress-bar">
+            <div id="fixos-empresa-bar" class="fixos-progress-fill" style="width: 0%"></div>
+          </div>
+          <div id="fixos-list-empresa" class="fixos-list">
+            <!-- Dynamic rows -->
+          </div>
+          <button class="btn-add-inline" id="btn-add-fixo-empresa">
+            <i data-lucide="plus-circle"></i> Adicionar custo fixo da empresa
+          </button>
+        </div>
+
+        <!-- Pessoal Section -->
+        <div class="fixos-section" id="fixos-section-pessoal">
+          <div class="fixos-section-header" id="fixos-section-pessoal-toggle">
+            <div class="fixos-section-title">
+              <span class="fixos-section-icon">👤</span>
+              <span>Pessoal (Custos Fixos PF)</span>
+            </div>
+            <div class="fixos-section-meta">
+              <span id="fixos-pessoal-summary" class="fixos-section-summary">R$ 0 / R$ 0</span>
+              <i data-lucide="chevron-down" class="fixos-chevron"></i>
+            </div>
+          </div>
+          <div class="fixos-progress-bar">
+            <div id="fixos-pessoal-bar" class="fixos-progress-fill pessoal" style="width: 0%"></div>
+          </div>
+          <div id="fixos-list-pessoal" class="fixos-list">
+            <!-- Dynamic rows -->
+          </div>
+          <button class="btn-add-inline" id="btn-add-fixo-pessoal">
+            <i data-lucide="plus-circle"></i> Adicionar custo fixo pessoal
+          </button>
+        </div>
+
+        <!-- Bottom actions -->
+        <div style="display: flex; justify-content: center; gap: 12px; margin-top: 8px; padding-bottom: 8px;">
+          <button id="btn-view-all-from-fixos" class="btn-text" style="font-size: 12px; color: var(--text-secondary);">
+            <i data-lucide="receipt"></i> Histórico
+          </button>
+          <button onclick="openResetMonthModal()" class="btn-text" style="font-size: 12px; color: var(--danger-color); opacity: 0.7;">
+            <i data-lucide="refresh-ccw"></i> Reiniciar mês
+          </button>
+        </div>
+      </section>
+
+      <!-- ================= TAB: TRANSACTIONS (LANÇAMENTOS) ================= -->
+
+      <section id="tab-transactions" class="tab-panel hidden">
+        <h2 class="page-title">Histórico de Lançamentos</h2>
+
+        <!-- Filters Box -->
+        <div class="filter-box glass">
+          <div class="search-bar">
+            <i data-lucide="search" class="search-icon"></i>
+            <input type="text" id="input-search" placeholder="Buscar descrição ou categoria...">
+          </div>
+          <div class="filter-row">
+            <select id="filter-type" class="filter-select">
+              <option value="all">Todos os tipos</option>
+              <option value="entradas">Entradas (Receitas)</option>
+              <option value="empresa">Empresa (Custos)</option>
+              <option value="pessoal">Pessoal (Custos)</option>
+            </select>
+            
+            <select id="filter-category" class="filter-select">
+              <option value="all">Todas as categorias</option>
+              <!-- JS Injected Categories -->
+            </select>
+
+            <select id="filter-month" class="filter-select">
+              <!-- JS Injected Months -->
+            </select>
+          </div>
+        </div>
+
+        <!-- Transactions List -->
+        <div class="transactions-container">
+          <div id="full-transactions-list" class="full-list">
+            <!-- Dynamic Injected rows -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TAB: VOICE INPUT (MICROFONE) ================= -->
+      <section id="tab-voice" class="tab-panel hidden">
+        <div class="voice-screen-content">
+          <h2 class="voice-title">Anota aí por Voz</h2>
+          <p class="voice-subtitle">Aperte o botão e fale naturalmente. O app organizará tudo automaticamente.</p>
+
+          <!-- Massive Audio Visualization Pulse Button -->
+          <div class="mic-visualization-container">
+            <div id="mic-pulse-ring-1" class="pulse-ring"></div>
+            <div id="mic-pulse-ring-2" class="pulse-ring"></div>
+            <button id="btn-voice-record" class="huge-mic-btn" title="Gravar voz">
+              <i data-lucide="mic" class="mic-icon"></i>
+            </button>
+          </div>
+
+          <div class="voice-status-box">
+            <span id="voice-status-text" class="status-inactive">Toque para começar a falar</span>
+          </div>
+
+          <!-- Realtime Speech-to-text Transcript Panel -->
+          <div class="transcript-panel glass">
+            <span class="transcript-label">O que eu entendi:</span>
+            <p id="voice-transcript" class="transcript-placeholder">"Anota aí... R$ 50 reais que eu comprei na papelaria para o trabalho"</p>
+          </div>
+
+          <!-- Undo Last Voice Action Button -->
+          <div id="voice-undo-container" class="voice-undo-container hidden animate-fade-in" style="margin-top: 15px; margin-bottom: 5px; display: flex; justify-content: center; width: 100%;">
+            <button id="btn-voice-undo" class="btn secondary" style="background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.3); color: #f87171; display: inline-flex; align-items: center; gap: 8px; font-weight: 600; padding: 12px 24px; border-radius: 50px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);">
+              <i data-lucide="undo" style="width: 16px; height: 16px;"></i> Desfazer Última Gravação
+            </button>
+          </div>
+
+          <!-- Audio Instruction Cheatsheet -->
+          <div class="cheatsheet glass">
+            <h4 class="cheatsheet-title"><i data-lucide="help-circle"></i> Exemplos de Comando</h4>
+            <ul class="cheatsheet-list">
+              <li>🗣️ <em>"Anota aí cinquenta reais que eu comprei na papelaria para o trabalho"</em></li>
+              <li>🗣️ <em>"Recebi oitocentos reais do aluguel hoje"</em></li>
+              <li>🗣️ <em>"Gastei trinta e cinco reais no McDonald's para o pessoal"</em></li>
+              <li>🗣️ <em>"Recebi mil e duzentos reais de fotografia"</em></li>
+              <li>🗣️ <em>"Anota aí cem reais no posto de gasolina do trabalho"</em></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TAB: CONFIGURAÇÕES (SETTINGS) ================= -->
+      <section id="tab-settings" class="tab-panel hidden">
+        <h2 class="page-title">Configurações</h2>
+
+        <div class="settings-group glass">
+          <h3 class="settings-group-title"><i data-lucide="database"></i> Gerenciamento de Dados</h3>
+          
+          <div class="setting-item">
+            <div class="setting-info">
+              <span class="setting-name">Backup em CSV/JSON</span>
+              <span class="setting-desc">Baixe todas as suas transações em um arquivo compatível com Excel.</span>
+            </div>
+            <div class="setting-actions">
+              <button id="btn-export-csv" class="btn secondary"><i data-lucide="download"></i> CSV</button>
+              <button id="btn-export-json" class="btn secondary"><i data-lucide="download"></i> JSON</button>
+            </div>
+          </div>
+
+          <div class="setting-item">
+            <div class="setting-info">
+              <span class="setting-name">Importar Dados em Lote</span>
+              <span class="setting-desc">Cole as linhas em formato de texto para adicionar múltiplos registros de uma vez.</span>
+            </div>
+            <div class="setting-actions">
+              <button id="btn-open-import" class="btn primary"><i data-lucide="upload"></i> Importar</button>
+            </div>
+          </div>
+
+          <div class="setting-item animate-fade-in">
+            <div class="setting-info">
+              <span class="setting-name">Reiniciar Mês</span>
+              <span class="setting-desc">Apaga lançamentos do mês <strong id="lbl-active-month-reset">Maio</strong> para recomeçar do zero com seleção granular.</span>
+            </div>
+            <div class="setting-actions">
+              <button id="btn-reset-current-month" class="btn danger-outline" onclick="openResetMonthModal()"><i data-lucide="refresh-ccw"></i> Reiniciar Mês</button>
+            </div>
+          </div>
+
+          <div class="setting-item">
+            <div class="setting-info">
+              <span class="setting-name">Restaurar Planilha Original</span>
+              <span class="setting-desc">Apaga as alterações locais e restaura a planilha `Controle_Financeiro_2026.xlsx`.</span>
+            </div>
+            <div class="setting-actions">
+              <button id="btn-reset-data" class="btn danger"><i data-lucide="rotate-ccw"></i> Restaurar</button>
+            </div>
+          </div>
+
+          <div class="setting-item">
+            <div class="setting-info">
+              <span class="setting-name">Limpar Todos os Dados</span>
+              <span class="setting-desc">Apaga permanentemente todo o histórico salvo localmente.</span>
+            </div>
+            <div class="setting-actions">
+              <button id="btn-clear-data" class="btn danger-outline"><i data-lucide="trash-2"></i> Limpar Tudo</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-group glass">
+          <h3 class="settings-group-title"><i data-lucide="layers"></i> Categorias Cadastradas</h3>
+          
+          <div class="category-manager-row">
+            <div class="cat-col">
+              <h4>🏢 Empresa</h4>
+              <ul id="settings-empresa-cats" class="cat-pill-list"></ul>
+            </div>
+            <div class="cat-col">
+              <h4>👤 Pessoal</h4>
+              <ul id="settings-pessoal-cats" class="cat-pill-list"></ul>
+            </div>
+            <div class="cat-col">
+              <h4>💵 Entradas</h4>
+              <ul id="settings-entradas-cats" class="cat-pill-list"></ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-group glass">
+          <h3 class="settings-group-title"><i data-lucide="info"></i> Sobre o App</h3>
+          <div class="app-info-card">
+            <div class="app-info-logo">
+              <i data-lucide="mic"></i>
+            </div>
+            <div class="app-info-text">
+              <strong>Anota Aí</strong>
+              <span>Versão 1.0.0 (PWA local)</span>
+              <span>Construído especificamente para otimização de finanças por voz.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Navigation Bar Bottom -->
+    <nav class="bottom-nav">
+      <button id="nav-dashboard" class="nav-item active" data-tab="dashboard">
+        <i data-lucide="layout-dashboard"></i>
+        <span>Painel</span>
+      </button>
+      <button id="nav-fixos" class="nav-item" data-tab="fixos">
+        <i data-lucide="clipboard-list"></i>
+        <span>Fixas</span>
+      </button>
+      
+
+      <!-- Central Highlighted Voice Button -->
+      <button id="nav-voice" class="nav-item nav-voice-highlight" data-tab="voice">
+        <div class="nav-mic-circle">
+          <i data-lucide="mic"></i>
+        </div>
+      </button>
+      
+      <button id="nav-settings" class="nav-item" data-tab="settings">
+        <i data-lucide="settings"></i>
+        <span>Ajustes</span>
+      </button>
+    </nav>
+
+  </div> <!-- End App Container -->
+
+
+  <!-- ================= MODAL: VOICE REVIEW DIALOG ================= -->
+  <div id="modal-voice-review" class="modal hidden">
+    <div class="modal-overlay"></div>
+    <div class="modal-content glass animate-scale-up">
+      <div class="modal-header">
+        <h3 class="modal-title"><i data-lucide="sparkles" class="text-green"></i> Confirmar Lançamento</h3>
+        <button id="btn-close-review" class="btn-icon"><i data-lucide="x"></i></button>
+      </div>
+      
+      <div class="modal-body">
+        <p class="review-helper-text">Aqui está o que eu entendi do seu áudio. Ajuste se necessário:</p>
+        
+        <form id="form-voice-entry" class="review-form">
+          <!-- Value input large -->
+          <div class="form-group val-group">
+            <label for="review-val">Valor (R$)</label>
+            <div class="input-val-container">
+              <span class="currency-symbol">R$</span>
+              <input type="number" step="0.01" id="review-val" class="input-val" required>
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div class="form-group">
+            <label for="review-desc">Descrição / Onde comprou</label>
+            <input type="text" id="review-desc" class="input-text" required placeholder="Ex: Mercado Livre, Posto, etc.">
+          </div>
+
+          <!-- Type Select Buttons -->
+          <div class="form-group">
+            <label>Tipo de Lançamento</label>
+            <div class="type-button-group">
+              <button type="button" id="btn-type-pessoal" class="btn-type-select active" data-type="pessoal">
+                <i data-lucide="user"></i> Pessoal
+              </button>
+              <button type="button" id="btn-type-empresa" class="btn-type-select" data-type="empresa">
+                <i data-lucide="building-2"></i> Empresa
+              </button>
+              <button type="button" id="btn-type-entrada" class="btn-type-select" data-type="entradas">
+                <i data-lucide="trending-up"></i> Entrada
+              </button>
+            </div>
+          </div>
+
+          <!-- Category Selector -->
+          <div class="form-group">
+            <label for="review-category">Categoria</label>
+            <select id="review-category" class="filter-select select-block" required>
+              <!-- Populated dynamically based on Type selection -->
+            </select>
+          </div>
+
+          <!-- Date -->
+          <div class="form-group">
+            <label for="review-date">Data do Pagamento</label>
+            <input type="date" id="review-date" class="input-text" required>
+          </div>
+
+          <!-- Status & Observation -->
+          <div class="form-row">
+            <div class="form-group flex-1">
+              <label for="review-status">Status</label>
+              <select id="review-status" class="filter-select select-block">
+                <option value="✅ Pago">✅ Pago</option>
+                <option value="🛑Atrasado">🛑 Atrasado</option>
+                <option value="Entregue">Entregue</option>
+                <option value="Não Entregue">Não Entregue</option>
+                <option value="Pendente">Pendente</option>
+                <option value="">Nenhum</option>
+              </select>
+            </div>
+            
+            <div class="form-group flex-2">
+              <label for="review-obs">Observações</label>
+              <input type="text" id="review-obs" class="input-text" placeholder="Algum detalhe extra...">
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button id="btn-cancel-entry" type="button" class="btn secondary">Descartar</button>
+        <button id="btn-save-entry" type="button" class="btn success"><i data-lucide="check"></i> Confirmar e Salvar</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ================= MODAL: TEXT BATCH IMPORT ================= -->
+  <div id="modal-batch-import" class="modal hidden">
+    <div class="modal-overlay"></div>
+    <div class="modal-content glass animate-scale-up">
+      <div class="modal-header">
+        <h3 class="modal-title"><i data-lucide="upload"></i> Importar Dados em Lote</h3>
+        <button id="btn-close-import" class="btn-icon"><i data-lucide="x"></i></button>
+      </div>
+      
+      <div class="modal-body">
+        <p class="review-helper-text">
+          Arraste e solte o extrato do seu banco ou cole o conteúdo abaixo. 
+          Suportamos automaticamente: <strong>Nubank, Itaú, Bradesco, Santander, Inter, Sicoob</strong> e outros bancos brasileiros.
+        </p>
+        
+        <div class="form-group">
+          <label for="import-type">Tipo dos Dados Colados</label>
+          <select id="import-type" class="filter-select select-block">
+            <option value="pessoal">👤 Despesas Pessoais</option>
+            <option value="empresa">🏢 Despesas da Empresa</option>
+            <option value="entradas">💵 Entradas (Receitas)</option>
+          </select>
+        </div>
+
+          <label>Arraste o arquivo do seu banco aqui (.csv, .txt e outros):</label>
+          <div id="drop-zone" class="import-drop-zone">
+            <i data-lucide="upload-cloud" class="drop-icon"></i>
+            <span class="drop-text">Arraste e solte o arquivo aqui ou <span class="browse-link">procure no dispositivo</span></span>
+            <input type="file" id="file-import-input" accept=".csv,.txt,.ofx,.xls,.xlsx,.tsv" style="display: none;">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="textarea-import-data">Cole os dados aqui:</label>
+          <textarea id="textarea-import-data" class="textarea-import" rows="10" placeholder="Mês	Vencimento	Dt. Pagamento	Descrição	Categoria	Valor (R$)	Status	Observação&#10;Abril	2026-04-10	2026-04-10	Internet	Custos Fixos	100	✅ Pago	"></textarea>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button id="btn-cancel-import" type="button" class="btn secondary">Cancelar</button>
+        <button id="btn-process-import" type="button" class="btn primary"><i data-lucide="plus-circle"></i> Processar e Adicionar</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ================= MODAL: OBLIGATION DETAILS ================= -->
+  <div id="modal-obligation-details" class="modal hidden">
+    <div class="modal-overlay" id="btn-close-obligation-overlay"></div>
+    <div class="modal-content glass animate-scale-up" style="max-width: 600px; width: 92%;">
+      <div class="modal-header" style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: var(--spacing-sm);">
+        <h3 class="modal-title" id="lbl-obligation-modal-title" style="font-size: var(--font-size-md); display: flex; align-items: center; gap: 8px;">
+          <i data-lucide="scale" class="text-green"></i> Detalhes dos Custos
+        </h3>
+        <button type="button" class="btn-close" id="btn-close-obligation-top" style="background: none; border: none; color: var(--text-secondary); cursor: pointer; display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; background-color: rgba(255,255,255,0.03); transition: var(--transition-fast);"><i data-lucide="x" style="width: 18px; height: 18px;"></i></button>
+      </div>
+      
+      <div class="modal-body" style="max-height: 55vh; overflow-y: auto; padding: var(--spacing-md) 0; display: flex; flex-direction: column; gap: var(--spacing-md);">
+        <!-- Summary Stats inside Modal -->
+        <div class="modal-summary-stats" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-xs); padding: var(--spacing-sm); background: rgba(255, 255, 255, 0.02); border-radius: var(--radius-md); border: 1px solid rgba(255, 255, 255, 0.04); text-align: center;">
+          <div>
+            <div style="font-size: 9px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2px;">Previsto</div>
+            <div id="lbl-modal-total" style="font-size: 13px; font-weight: 600; color: var(--text-primary);">R$ 0,00</div>
+          </div>
+          <div>
+            <div style="font-size: 9px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2px;">Pago</div>
+            <div id="lbl-modal-paid" style="font-size: 13px; font-weight: 600; color: var(--green-color);">R$ 0,00</div>
+          </div>
+          <div>
+            <div style="font-size: 9px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2px;">Pendente</div>
+            <div id="lbl-modal-pending" style="font-size: 13px; font-weight: 600; color: var(--danger-color);">R$ 0,00</div>
+          </div>
+        </div>
+
+        <!-- Scrollable list of items -->
+        <div id="list-obligation-transactions" class="details-transaction-list" style="display: flex; flex-direction: column; gap: var(--spacing-sm);">
+          <!-- Dynamic rows will be rendered here -->
+        </div>
+      </div>
+      
+      <div class="modal-footer" style="border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: var(--spacing-sm); margin-top: 0; display: flex; justify-content: flex-end;">
+        <button id="btn-close-obligation-details" type="button" class="btn secondary" style="padding: var(--spacing-xs) var(--spacing-md); font-size: 13px;">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ================= MODAL: ADICIONAR DESPESA FIXA ================= -->
+  <div id="modal-add-fixo" class="modal hidden">
+    <div class="modal-overlay" id="modal-add-fixo-overlay"></div>
+    <div class="modal-content glass animate-scale-up">
+      <div class="modal-header">
+        <h3 class="modal-title"><i data-lucide="clipboard-list" class="text-green"></i> Nova Despesa Fixa</h3>
+        <button id="btn-close-add-fixo" class="btn-icon"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <form id="form-add-fixo">
+
+          <div class="form-group">
+            <label for="fixo-descricao">Descrição</label>
+            <input type="text" id="fixo-descricao" class="input-text" placeholder="Ex: Aluguel, Netflix, Seguro..." required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group flex-1">
+              <label for="fixo-valor">Valor (R$)</label>
+              <div class="input-val-container">
+                <span class="currency-symbol">R$</span>
+                <input type="number" step="0.01" id="fixo-valor" class="input-val" placeholder="0,00" required>
+              </div>
+            </div>
+            <div class="form-group flex-1">
+              <label for="fixo-dia">Dia de Vencimento</label>
+              <input type="number" min="1" max="31" id="fixo-dia" class="input-text" placeholder="Ex: 5, 10, 20">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Tipo</label>
+            <div class="type-button-group">
+              <button type="button" id="btn-fixo-empresa" class="btn-type-select active" data-fixo-type="empresa">
+                <i data-lucide="building-2"></i> Empresa
+              </button>
+              <button type="button" id="btn-fixo-pessoal" class="btn-type-select" data-fixo-type="pessoal">
+                <i data-lucide="user"></i> Pessoal
+              </button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="fixo-categoria">Categoria</label>
+            <select id="fixo-categoria" class="filter-select select-block">
+              <option value="Custos Fixos">Custos Fixos</option>
+              <option value="Custos Variáveis">Custos Variáveis</option>
+              <option value="Impostos e Taxas">Impostos e Taxas</option>
+              <option value="Moradia">Moradia</option>
+              <option value="Serviços">Serviços</option>
+              <option value="Lazer & Assinaturas">Lazer & Assinaturas</option>
+              <option value="Saúde">Saúde</option>
+              <option value="Carro">Carro</option>
+              <option value="Alimentação">Alimentação</option>
+              <option value="Outros">Outros</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="fixo-obs">Observação (opcional)</label>
+            <input type="text" id="fixo-obs" class="input-text" placeholder="Algum detalhe...">
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button id="btn-cancel-add-fixo" type="button" class="btn secondary">Cancelar</button>
+        <button id="btn-save-add-fixo" type="button" class="btn success"><i data-lucide="check"></i> Salvar</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ================= MODAL: REINICIAR MÊS ================= -->
+  <div id="modal-reset-month" class="modal hidden">
+    <div class="modal-overlay" id="modal-reset-overlay"></div>
+    <div class="modal-content glass animate-scale-up" style="max-width: 380px;">
+      <div class="modal-header">
+        <h3 class="modal-title"><i data-lucide="refresh-ccw" style="color: var(--danger-color);"></i> Reiniciar Mês</h3>
+        <button id="btn-close-reset-modal" class="btn-icon"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="reset-month-display glass" id="reset-month-label-display">
+          <i data-lucide="calendar-x"></i>
+          <span id="reset-month-name">Maio 2026</span>
+        </div>
+
+        <p style="font-size: 12px; color: var(--text-secondary); margin: var(--spacing-md) 0 var(--spacing-sm); line-height: 1.6;">
+          Selecione o que deseja apagar do mês. Você poderá desfazer imediatamente após a operação.
+        </p>
+
+        <div class="reset-options-list">
+          <label class="reset-option-row">
+            <input type="checkbox" id="reset-opt-entradas" checked>
+            <span class="reset-option-icon" style="color: var(--green-color);">💵</span>
+            <span class="reset-option-text">Entradas (receitas)</span>
+          </label>
+          <label class="reset-option-row">
+            <input type="checkbox" id="reset-opt-empresa" checked>
+            <span class="reset-option-icon">🏢</span>
+            <span class="reset-option-text">Despesas da Empresa</span>
+          </label>
+          <label class="reset-option-row">
+            <input type="checkbox" id="reset-opt-pessoal" checked>
+            <span class="reset-option-icon">👤</span>
+            <span class="reset-option-text">Despesas Pessoais</span>
+          </label>
+          <label class="reset-option-row">
+            <input type="checkbox" id="reset-opt-fixos-status">
+            <span class="reset-option-icon">📋</span>
+            <span class="reset-option-text">Status das Despesas Fixas</span>
+          </label>
+        </div>
+
+        <div class="reset-warning-box">
+          <i data-lucide="triangle-alert"></i>
+          <span>Esta ação pode ser <strong>desfeita</strong> logo após a confirmação.</span>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button id="btn-cancel-reset" type="button" class="btn secondary">Cancelar</button>
+        <button id="btn-confirm-reset" type="button" class="btn danger">
+          <i data-lucide="trash-2"></i> Reiniciar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Core Database Script -->
+  <script src="initialData.js"></script>
+  
+
+  <!-- Main Application Script -->
+  <script src="app.js"></script>
+</body>
+</html>

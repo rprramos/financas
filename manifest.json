@@ -1,0 +1,18 @@
+{
+  "name": "Anota Aí - Controle Financeiro por Voz",
+  "short_name": "Anota Aí",
+  "description": "Controle financeiro pessoal e empresarial inteligente por voz.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0B0F19",
+  "theme_color": "#3B82F6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2950/2950153.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
