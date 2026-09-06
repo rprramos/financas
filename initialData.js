@@ -4608,33 +4608,43 @@ const INITIAL_DATA = {
         },
         {
             "mes": "Setembro",
-            "vencimento": "2026-09-12",
-            "data": "2026-09-12",
-            "descricao": "Diarista / Limpeza - Maria Auxiliadora (1/2)",
+            "vencimento": "2026-09-05",
+            "data": "2026-09-05",
+            "descricao": "Diarista / Limpeza - Semana 1 (2 diárias)",
             "categoria": "Moradia",
             "valor": 440,
             "status": "⏳ Pendente",
-            "observacao": "Diárias limpeza quinzena 1"
+            "observacao": "2 diárias de R$ 220 (Semana 1)"
+        },
+        {
+            "mes": "Setembro",
+            "vencimento": "2026-09-12",
+            "data": "2026-09-12",
+            "descricao": "Diarista / Limpeza - Semana 2 (2 diárias)",
+            "categoria": "Moradia",
+            "valor": 440,
+            "status": "⏳ Pendente",
+            "observacao": "2 diárias de R$ 220 (Semana 2)"
+        },
+        {
+            "mes": "Setembro",
+            "vencimento": "2026-09-19",
+            "data": "2026-09-19",
+            "descricao": "Diarista / Limpeza - Semana 3 (2 diárias)",
+            "categoria": "Moradia",
+            "valor": 440,
+            "status": "⏳ Pendente",
+            "observacao": "2 diárias de R$ 220 (Semana 3)"
         },
         {
             "mes": "Setembro",
             "vencimento": "2026-09-26",
             "data": "2026-09-26",
-            "descricao": "Diarista / Limpeza - Maria Auxiliadora (2/2)",
+            "descricao": "Diarista / Limpeza - Semana 4 (2 diárias)",
             "categoria": "Moradia",
-            "valor": 220,
+            "valor": 440,
             "status": "⏳ Pendente",
-            "observacao": "Diária limpeza quinzena 2"
-        },
-        {
-            "mes": "Setembro",
-            "vencimento": "2026-09-26",
-            "data": "2026-09-26",
-            "descricao": "Diarista / Limpeza - Rosana Francelino",
-            "categoria": "Moradia",
-            "valor": 220,
-            "status": "⏳ Pendente",
-            "observacao": "Diária limpeza quinzena 2"
+            "observacao": "2 diárias de R$ 220 (Semana 4)"
         },
         {
             "mes": "Setembro",
@@ -4645,6 +4655,16 @@ const INITIAL_DATA = {
             "valor": 481.63,
             "status": "⏳ Pendente",
             "observacao": "Linha celular e internet residencial"
+        },
+        {
+            "mes": "Setembro",
+            "vencimento": "2026-09-10",
+            "data": "2026-09-10",
+            "descricao": "Nu Seguro Celular",
+            "categoria": "Serviços",
+            "valor": 66.12,
+            "status": "⏳ Pendente",
+            "observacao": "Seguro celular"
         },
         {
             "mes": "Setembro",
@@ -4668,23 +4688,13 @@ const INITIAL_DATA = {
         },
         {
             "mes": "Setembro",
-            "vencimento": "2026-09-10",
-            "data": "2026-09-10",
-            "descricao": "Nu Seguro Celular",
-            "categoria": "Serviços",
-            "valor": 66.12,
-            "status": "⏳ Pendente",
-            "observacao": "Seguro celular"
-        },
-        {
-            "mes": "Setembro",
-            "vencimento": "2026-09-24",
-            "data": "2026-09-24",
-            "descricao": "Sócio Torcedor Flamengo",
+            "vencimento": "2026-09-20",
+            "data": "2026-09-20",
+            "descricao": "YouTube Premium",
             "categoria": "Lazer & Assinaturas",
-            "valor": 312,
+            "valor": 25.92,
             "status": "⏳ Pendente",
-            "observacao": "Sócio torcedor CRF"
+            "observacao": "Assinatura YouTube"
         },
         {
             "mes": "Setembro",
@@ -4698,16 +4708,6 @@ const INITIAL_DATA = {
         },
         {
             "mes": "Setembro",
-            "vencimento": "2026-09-20",
-            "data": "2026-09-20",
-            "descricao": "YouTube Premium",
-            "categoria": "Lazer & Assinaturas",
-            "valor": 25.92,
-            "status": "⏳ Pendente",
-            "observacao": "Assinatura YouTube"
-        },
-        {
-            "mes": "Setembro",
             "vencimento": "2026-09-02",
             "data": "2026-09-02",
             "descricao": "Clube iFood",
@@ -4715,16 +4715,6 @@ const INITIAL_DATA = {
             "valor": 5.95,
             "status": "⏳ Pendente",
             "observacao": "Assinatura Clube iFood"
-        },
-        {
-            "mes": "Setembro",
-            "vencimento": "2026-09-10",
-            "data": "2026-09-10",
-            "descricao": "Condomínio Citta America",
-            "categoria": "Moradia",
-            "valor": 51.6,
-            "status": "⏳ Pendente",
-            "observacao": "Taxa condomínio / garagem"
         },
         {
             "mes": "Outubro",
@@ -4758,33 +4748,43 @@ const INITIAL_DATA = {
         },
         {
             "mes": "Outubro",
-            "vencimento": "2026-10-12",
-            "data": "2026-10-12",
-            "descricao": "Diarista / Limpeza - Maria Auxiliadora (1/2)",
+            "vencimento": "2026-10-05",
+            "data": "2026-10-05",
+            "descricao": "Diarista / Limpeza - Semana 1 (2 diárias)",
             "categoria": "Moradia",
             "valor": 440,
             "status": "⏳ Pendente",
-            "observacao": "Diárias limpeza quinzena 1"
+            "observacao": "2 diárias de R$ 220 (Semana 1)"
+        },
+        {
+            "mes": "Outubro",
+            "vencimento": "2026-10-12",
+            "data": "2026-10-12",
+            "descricao": "Diarista / Limpeza - Semana 2 (2 diárias)",
+            "categoria": "Moradia",
+            "valor": 440,
+            "status": "⏳ Pendente",
+            "observacao": "2 diárias de R$ 220 (Semana 2)"
+        },
+        {
+            "mes": "Outubro",
+            "vencimento": "2026-10-19",
+            "data": "2026-10-19",
+            "descricao": "Diarista / Limpeza - Semana 3 (2 diárias)",
+            "categoria": "Moradia",
+            "valor": 440,
+            "status": "⏳ Pendente",
+            "observacao": "2 diárias de R$ 220 (Semana 3)"
         },
         {
             "mes": "Outubro",
             "vencimento": "2026-10-26",
             "data": "2026-10-26",
-            "descricao": "Diarista / Limpeza - Maria Auxiliadora (2/2)",
+            "descricao": "Diarista / Limpeza - Semana 4 (2 diárias)",
             "categoria": "Moradia",
-            "valor": 220,
+            "valor": 440,
             "status": "⏳ Pendente",
-            "observacao": "Diária limpeza quinzena 2"
-        },
-        {
-            "mes": "Outubro",
-            "vencimento": "2026-10-26",
-            "data": "2026-10-26",
-            "descricao": "Diarista / Limpeza - Rosana Francelino",
-            "categoria": "Moradia",
-            "valor": 220,
-            "status": "⏳ Pendente",
-            "observacao": "Diária limpeza quinzena 2"
+            "observacao": "2 diárias de R$ 220 (Semana 4)"
         },
         {
             "mes": "Outubro",
@@ -4795,6 +4795,16 @@ const INITIAL_DATA = {
             "valor": 481.63,
             "status": "⏳ Pendente",
             "observacao": "Linha celular e internet residencial"
+        },
+        {
+            "mes": "Outubro",
+            "vencimento": "2026-10-10",
+            "data": "2026-10-10",
+            "descricao": "Nu Seguro Celular",
+            "categoria": "Serviços",
+            "valor": 66.12,
+            "status": "⏳ Pendente",
+            "observacao": "Seguro celular"
         },
         {
             "mes": "Outubro",
@@ -4818,23 +4828,13 @@ const INITIAL_DATA = {
         },
         {
             "mes": "Outubro",
-            "vencimento": "2026-10-10",
-            "data": "2026-10-10",
-            "descricao": "Nu Seguro Celular",
-            "categoria": "Serviços",
-            "valor": 66.12,
-            "status": "⏳ Pendente",
-            "observacao": "Seguro celular"
-        },
-        {
-            "mes": "Outubro",
-            "vencimento": "2026-10-24",
-            "data": "2026-10-24",
-            "descricao": "Sócio Torcedor Flamengo",
+            "vencimento": "2026-10-20",
+            "data": "2026-10-20",
+            "descricao": "YouTube Premium",
             "categoria": "Lazer & Assinaturas",
-            "valor": 312,
+            "valor": 25.92,
             "status": "⏳ Pendente",
-            "observacao": "Sócio torcedor CRF"
+            "observacao": "Assinatura YouTube"
         },
         {
             "mes": "Outubro",
@@ -4848,16 +4848,6 @@ const INITIAL_DATA = {
         },
         {
             "mes": "Outubro",
-            "vencimento": "2026-10-20",
-            "data": "2026-10-20",
-            "descricao": "YouTube Premium",
-            "categoria": "Lazer & Assinaturas",
-            "valor": 25.92,
-            "status": "⏳ Pendente",
-            "observacao": "Assinatura YouTube"
-        },
-        {
-            "mes": "Outubro",
             "vencimento": "2026-10-02",
             "data": "2026-10-02",
             "descricao": "Clube iFood",
@@ -4865,16 +4855,6 @@ const INITIAL_DATA = {
             "valor": 5.95,
             "status": "⏳ Pendente",
             "observacao": "Assinatura Clube iFood"
-        },
-        {
-            "mes": "Outubro",
-            "vencimento": "2026-10-10",
-            "data": "2026-10-10",
-            "descricao": "Condomínio Citta America",
-            "categoria": "Moradia",
-            "valor": 51.6,
-            "status": "⏳ Pendente",
-            "observacao": "Taxa condomínio / garagem"
         },
         {
             "mes": "Novembro",
@@ -4908,33 +4888,43 @@ const INITIAL_DATA = {
         },
         {
             "mes": "Novembro",
-            "vencimento": "2026-11-12",
-            "data": "2026-11-12",
-            "descricao": "Diarista / Limpeza - Maria Auxiliadora (1/2)",
+            "vencimento": "2026-11-05",
+            "data": "2026-11-05",
+            "descricao": "Diarista / Limpeza - Semana 1 (2 diárias)",
             "categoria": "Moradia",
             "valor": 440,
             "status": "⏳ Pendente",
-            "observacao": "Diárias limpeza quinzena 1"
+            "observacao": "2 diárias de R$ 220 (Semana 1)"
+        },
+        {
+            "mes": "Novembro",
+            "vencimento": "2026-11-12",
+            "data": "2026-11-12",
+            "descricao": "Diarista / Limpeza - Semana 2 (2 diárias)",
+            "categoria": "Moradia",
+            "valor": 440,
+            "status": "⏳ Pendente",
+            "observacao": "2 diárias de R$ 220 (Semana 2)"
+        },
+        {
+            "mes": "Novembro",
+            "vencimento": "2026-11-19",
+            "data": "2026-11-19",
+            "descricao": "Diarista / Limpeza - Semana 3 (2 diárias)",
+            "categoria": "Moradia",
+            "valor": 440,
+            "status": "⏳ Pendente",
+            "observacao": "2 diárias de R$ 220 (Semana 3)"
         },
         {
             "mes": "Novembro",
             "vencimento": "2026-11-26",
             "data": "2026-11-26",
-            "descricao": "Diarista / Limpeza - Maria Auxiliadora (2/2)",
+            "descricao": "Diarista / Limpeza - Semana 4 (2 diárias)",
             "categoria": "Moradia",
-            "valor": 220,
+            "valor": 440,
             "status": "⏳ Pendente",
-            "observacao": "Diária limpeza quinzena 2"
-        },
-        {
-            "mes": "Novembro",
-            "vencimento": "2026-11-26",
-            "data": "2026-11-26",
-            "descricao": "Diarista / Limpeza - Rosana Francelino",
-            "categoria": "Moradia",
-            "valor": 220,
-            "status": "⏳ Pendente",
-            "observacao": "Diária limpeza quinzena 2"
+            "observacao": "2 diárias de R$ 220 (Semana 4)"
         },
         {
             "mes": "Novembro",
@@ -4945,6 +4935,16 @@ const INITIAL_DATA = {
             "valor": 481.63,
             "status": "⏳ Pendente",
             "observacao": "Linha celular e internet residencial"
+        },
+        {
+            "mes": "Novembro",
+            "vencimento": "2026-11-10",
+            "data": "2026-11-10",
+            "descricao": "Nu Seguro Celular",
+            "categoria": "Serviços",
+            "valor": 66.12,
+            "status": "⏳ Pendente",
+            "observacao": "Seguro celular"
         },
         {
             "mes": "Novembro",
@@ -4968,23 +4968,13 @@ const INITIAL_DATA = {
         },
         {
             "mes": "Novembro",
-            "vencimento": "2026-11-10",
-            "data": "2026-11-10",
-            "descricao": "Nu Seguro Celular",
-            "categoria": "Serviços",
-            "valor": 66.12,
-            "status": "⏳ Pendente",
-            "observacao": "Seguro celular"
-        },
-        {
-            "mes": "Novembro",
-            "vencimento": "2026-11-24",
-            "data": "2026-11-24",
-            "descricao": "Sócio Torcedor Flamengo",
+            "vencimento": "2026-11-20",
+            "data": "2026-11-20",
+            "descricao": "YouTube Premium",
             "categoria": "Lazer & Assinaturas",
-            "valor": 312,
+            "valor": 25.92,
             "status": "⏳ Pendente",
-            "observacao": "Sócio torcedor CRF"
+            "observacao": "Assinatura YouTube"
         },
         {
             "mes": "Novembro",
@@ -4998,16 +4988,6 @@ const INITIAL_DATA = {
         },
         {
             "mes": "Novembro",
-            "vencimento": "2026-11-20",
-            "data": "2026-11-20",
-            "descricao": "YouTube Premium",
-            "categoria": "Lazer & Assinaturas",
-            "valor": 25.92,
-            "status": "⏳ Pendente",
-            "observacao": "Assinatura YouTube"
-        },
-        {
-            "mes": "Novembro",
             "vencimento": "2026-11-02",
             "data": "2026-11-02",
             "descricao": "Clube iFood",
@@ -5015,16 +4995,6 @@ const INITIAL_DATA = {
             "valor": 5.95,
             "status": "⏳ Pendente",
             "observacao": "Assinatura Clube iFood"
-        },
-        {
-            "mes": "Novembro",
-            "vencimento": "2026-11-10",
-            "data": "2026-11-10",
-            "descricao": "Condomínio Citta America",
-            "categoria": "Moradia",
-            "valor": 51.6,
-            "status": "⏳ Pendente",
-            "observacao": "Taxa condomínio / garagem"
         },
         {
             "mes": "Dezembro",
@@ -5058,33 +5028,43 @@ const INITIAL_DATA = {
         },
         {
             "mes": "Dezembro",
-            "vencimento": "2026-12-12",
-            "data": "2026-12-12",
-            "descricao": "Diarista / Limpeza - Maria Auxiliadora (1/2)",
+            "vencimento": "2026-12-05",
+            "data": "2026-12-05",
+            "descricao": "Diarista / Limpeza - Semana 1 (2 diárias)",
             "categoria": "Moradia",
             "valor": 440,
             "status": "⏳ Pendente",
-            "observacao": "Diárias limpeza quinzena 1"
+            "observacao": "2 diárias de R$ 220 (Semana 1)"
+        },
+        {
+            "mes": "Dezembro",
+            "vencimento": "2026-12-12",
+            "data": "2026-12-12",
+            "descricao": "Diarista / Limpeza - Semana 2 (2 diárias)",
+            "categoria": "Moradia",
+            "valor": 440,
+            "status": "⏳ Pendente",
+            "observacao": "2 diárias de R$ 220 (Semana 2)"
+        },
+        {
+            "mes": "Dezembro",
+            "vencimento": "2026-12-19",
+            "data": "2026-12-19",
+            "descricao": "Diarista / Limpeza - Semana 3 (2 diárias)",
+            "categoria": "Moradia",
+            "valor": 440,
+            "status": "⏳ Pendente",
+            "observacao": "2 diárias de R$ 220 (Semana 3)"
         },
         {
             "mes": "Dezembro",
             "vencimento": "2026-12-26",
             "data": "2026-12-26",
-            "descricao": "Diarista / Limpeza - Maria Auxiliadora (2/2)",
+            "descricao": "Diarista / Limpeza - Semana 4 (2 diárias)",
             "categoria": "Moradia",
-            "valor": 220,
+            "valor": 440,
             "status": "⏳ Pendente",
-            "observacao": "Diária limpeza quinzena 2"
-        },
-        {
-            "mes": "Dezembro",
-            "vencimento": "2026-12-26",
-            "data": "2026-12-26",
-            "descricao": "Diarista / Limpeza - Rosana Francelino",
-            "categoria": "Moradia",
-            "valor": 220,
-            "status": "⏳ Pendente",
-            "observacao": "Diária limpeza quinzena 2"
+            "observacao": "2 diárias de R$ 220 (Semana 4)"
         },
         {
             "mes": "Dezembro",
@@ -5095,6 +5075,16 @@ const INITIAL_DATA = {
             "valor": 481.63,
             "status": "⏳ Pendente",
             "observacao": "Linha celular e internet residencial"
+        },
+        {
+            "mes": "Dezembro",
+            "vencimento": "2026-12-10",
+            "data": "2026-12-10",
+            "descricao": "Nu Seguro Celular",
+            "categoria": "Serviços",
+            "valor": 66.12,
+            "status": "⏳ Pendente",
+            "observacao": "Seguro celular"
         },
         {
             "mes": "Dezembro",
@@ -5118,23 +5108,13 @@ const INITIAL_DATA = {
         },
         {
             "mes": "Dezembro",
-            "vencimento": "2026-12-10",
-            "data": "2026-12-10",
-            "descricao": "Nu Seguro Celular",
-            "categoria": "Serviços",
-            "valor": 66.12,
-            "status": "⏳ Pendente",
-            "observacao": "Seguro celular"
-        },
-        {
-            "mes": "Dezembro",
-            "vencimento": "2026-12-24",
-            "data": "2026-12-24",
-            "descricao": "Sócio Torcedor Flamengo",
+            "vencimento": "2026-12-20",
+            "data": "2026-12-20",
+            "descricao": "YouTube Premium",
             "categoria": "Lazer & Assinaturas",
-            "valor": 312,
+            "valor": 25.92,
             "status": "⏳ Pendente",
-            "observacao": "Sócio torcedor CRF"
+            "observacao": "Assinatura YouTube"
         },
         {
             "mes": "Dezembro",
@@ -5148,16 +5128,6 @@ const INITIAL_DATA = {
         },
         {
             "mes": "Dezembro",
-            "vencimento": "2026-12-20",
-            "data": "2026-12-20",
-            "descricao": "YouTube Premium",
-            "categoria": "Lazer & Assinaturas",
-            "valor": 25.92,
-            "status": "⏳ Pendente",
-            "observacao": "Assinatura YouTube"
-        },
-        {
-            "mes": "Dezembro",
             "vencimento": "2026-12-02",
             "data": "2026-12-02",
             "descricao": "Clube iFood",
@@ -5165,16 +5135,6 @@ const INITIAL_DATA = {
             "valor": 5.95,
             "status": "⏳ Pendente",
             "observacao": "Assinatura Clube iFood"
-        },
-        {
-            "mes": "Dezembro",
-            "vencimento": "2026-12-10",
-            "data": "2026-12-10",
-            "descricao": "Condomínio Citta America",
-            "categoria": "Moradia",
-            "valor": 51.6,
-            "status": "⏳ Pendente",
-            "observacao": "Taxa condomínio / garagem"
         }
     ],
     "clientes": [
