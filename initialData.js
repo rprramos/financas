@@ -4608,43 +4608,23 @@ const INITIAL_DATA = {
         },
         {
             "mes": "Setembro",
-            "vencimento": "2026-09-05",
-            "data": "2026-09-05",
-            "descricao": "Diarista / Limpeza - Semana 1 (2 diárias)",
-            "categoria": "Moradia",
-            "valor": 440,
-            "status": "⏳ Pendente",
-            "observacao": "2 diárias de R$ 220 (Semana 1)"
-        },
-        {
-            "mes": "Setembro",
             "vencimento": "2026-09-12",
             "data": "2026-09-12",
-            "descricao": "Diarista / Limpeza - Semana 2 (2 diárias)",
+            "descricao": "Diarista / Limpeza - Quinzena 1",
             "categoria": "Moradia",
-            "valor": 440,
+            "valor": 220,
             "status": "⏳ Pendente",
-            "observacao": "2 diárias de R$ 220 (Semana 2)"
-        },
-        {
-            "mes": "Setembro",
-            "vencimento": "2026-09-19",
-            "data": "2026-09-19",
-            "descricao": "Diarista / Limpeza - Semana 3 (2 diárias)",
-            "categoria": "Moradia",
-            "valor": 440,
-            "status": "⏳ Pendente",
-            "observacao": "2 diárias de R$ 220 (Semana 3)"
+            "observacao": "1 diária (Quinzena 1)"
         },
         {
             "mes": "Setembro",
             "vencimento": "2026-09-26",
             "data": "2026-09-26",
-            "descricao": "Diarista / Limpeza - Semana 4 (2 diárias)",
+            "descricao": "Diarista / Limpeza - Quinzena 2",
             "categoria": "Moradia",
-            "valor": 440,
+            "valor": 220,
             "status": "⏳ Pendente",
-            "observacao": "2 diárias de R$ 220 (Semana 4)"
+            "observacao": "1 diária (Quinzena 2)"
         },
         {
             "mes": "Setembro",
@@ -4748,43 +4728,23 @@ const INITIAL_DATA = {
         },
         {
             "mes": "Outubro",
-            "vencimento": "2026-10-05",
-            "data": "2026-10-05",
-            "descricao": "Diarista / Limpeza - Semana 1 (2 diárias)",
-            "categoria": "Moradia",
-            "valor": 440,
-            "status": "⏳ Pendente",
-            "observacao": "2 diárias de R$ 220 (Semana 1)"
-        },
-        {
-            "mes": "Outubro",
             "vencimento": "2026-10-12",
             "data": "2026-10-12",
-            "descricao": "Diarista / Limpeza - Semana 2 (2 diárias)",
+            "descricao": "Diarista / Limpeza - Quinzena 1",
             "categoria": "Moradia",
-            "valor": 440,
+            "valor": 220,
             "status": "⏳ Pendente",
-            "observacao": "2 diárias de R$ 220 (Semana 2)"
-        },
-        {
-            "mes": "Outubro",
-            "vencimento": "2026-10-19",
-            "data": "2026-10-19",
-            "descricao": "Diarista / Limpeza - Semana 3 (2 diárias)",
-            "categoria": "Moradia",
-            "valor": 440,
-            "status": "⏳ Pendente",
-            "observacao": "2 diárias de R$ 220 (Semana 3)"
+            "observacao": "1 diária (Quinzena 1)"
         },
         {
             "mes": "Outubro",
             "vencimento": "2026-10-26",
             "data": "2026-10-26",
-            "descricao": "Diarista / Limpeza - Semana 4 (2 diárias)",
+            "descricao": "Diarista / Limpeza - Quinzena 2",
             "categoria": "Moradia",
-            "valor": 440,
+            "valor": 220,
             "status": "⏳ Pendente",
-            "observacao": "2 diárias de R$ 220 (Semana 4)"
+            "observacao": "1 diária (Quinzena 2)"
         },
         {
             "mes": "Outubro",
@@ -4888,43 +4848,23 @@ const INITIAL_DATA = {
         },
         {
             "mes": "Novembro",
-            "vencimento": "2026-11-05",
-            "data": "2026-11-05",
-            "descricao": "Diarista / Limpeza - Semana 1 (2 diárias)",
-            "categoria": "Moradia",
-            "valor": 440,
-            "status": "⏳ Pendente",
-            "observacao": "2 diárias de R$ 220 (Semana 1)"
-        },
-        {
-            "mes": "Novembro",
             "vencimento": "2026-11-12",
             "data": "2026-11-12",
-            "descricao": "Diarista / Limpeza - Semana 2 (2 diárias)",
+            "descricao": "Diarista / Limpeza - Quinzena 1",
             "categoria": "Moradia",
-            "valor": 440,
+            "valor": 220,
             "status": "⏳ Pendente",
-            "observacao": "2 diárias de R$ 220 (Semana 2)"
-        },
-        {
-            "mes": "Novembro",
-            "vencimento": "2026-11-19",
-            "data": "2026-11-19",
-            "descricao": "Diarista / Limpeza - Semana 3 (2 diárias)",
-            "categoria": "Moradia",
-            "valor": 440,
-            "status": "⏳ Pendente",
-            "observacao": "2 diárias de R$ 220 (Semana 3)"
+            "observacao": "1 diária (Quinzena 1)"
         },
         {
             "mes": "Novembro",
             "vencimento": "2026-11-26",
             "data": "2026-11-26",
-            "descricao": "Diarista / Limpeza - Semana 4 (2 diárias)",
+            "descricao": "Diarista / Limpeza - Quinzena 2",
             "categoria": "Moradia",
-            "valor": 440,
+            "valor": 220,
             "status": "⏳ Pendente",
-            "observacao": "2 diárias de R$ 220 (Semana 4)"
+            "observacao": "1 diária (Quinzena 2)"
         },
         {
             "mes": "Novembro",
@@ -5028,43 +4968,23 @@ const INITIAL_DATA = {
         },
         {
             "mes": "Dezembro",
-            "vencimento": "2026-12-05",
-            "data": "2026-12-05",
-            "descricao": "Diarista / Limpeza - Semana 1 (2 diárias)",
-            "categoria": "Moradia",
-            "valor": 440,
-            "status": "⏳ Pendente",
-            "observacao": "2 diárias de R$ 220 (Semana 1)"
-        },
-        {
-            "mes": "Dezembro",
             "vencimento": "2026-12-12",
             "data": "2026-12-12",
-            "descricao": "Diarista / Limpeza - Semana 2 (2 diárias)",
+            "descricao": "Diarista / Limpeza - Quinzena 1",
             "categoria": "Moradia",
-            "valor": 440,
+            "valor": 220,
             "status": "⏳ Pendente",
-            "observacao": "2 diárias de R$ 220 (Semana 2)"
-        },
-        {
-            "mes": "Dezembro",
-            "vencimento": "2026-12-19",
-            "data": "2026-12-19",
-            "descricao": "Diarista / Limpeza - Semana 3 (2 diárias)",
-            "categoria": "Moradia",
-            "valor": 440,
-            "status": "⏳ Pendente",
-            "observacao": "2 diárias de R$ 220 (Semana 3)"
+            "observacao": "1 diária (Quinzena 1)"
         },
         {
             "mes": "Dezembro",
             "vencimento": "2026-12-26",
             "data": "2026-12-26",
-            "descricao": "Diarista / Limpeza - Semana 4 (2 diárias)",
+            "descricao": "Diarista / Limpeza - Quinzena 2",
             "categoria": "Moradia",
-            "valor": 440,
+            "valor": 220,
             "status": "⏳ Pendente",
-            "observacao": "2 diárias de R$ 220 (Semana 4)"
+            "observacao": "1 diária (Quinzena 2)"
         },
         {
             "mes": "Dezembro",
