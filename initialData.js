@@ -232,7 +232,7 @@ const INITIAL_DATA = {
             "observacao": "Parcela 2/2"
         },
         {
-            "mes": "",
+            "mes": "Agosto",
             "data": "2026-08-31",
             "descricao": "David Casamento",
             "valor": 500,
@@ -1591,6 +1591,358 @@ const INITIAL_DATA = {
             "valor": 200,
             "status": "✅ Pago",
             "observacao": "Aluguel Estúdio"
+        },
+        {
+            "mes": "Setembro",
+            "vencimento": "2026-09-10",
+            "data": "2026-09-10",
+            "descricao": "Aluguel do Estúdio (Julio Cesar Paz)",
+            "tipo": "Custos Fixos",
+            "categoria": "Estrutura",
+            "valor": 1000,
+            "status": "⏳ Pendente",
+            "observacao": "Locação Estúdio / Espaço PJ"
+        },
+        {
+            "mes": "Setembro",
+            "vencimento": "2026-09-02",
+            "data": "2026-09-02",
+            "descricao": "Google On",
+            "tipo": "Custos Fixos",
+            "categoria": "Softwares",
+            "valor": 96.99,
+            "status": "⏳ Pendente",
+            "observacao": "Armazenamento Nuvem"
+        },
+        {
+            "mes": "Setembro",
+            "vencimento": "2026-09-10",
+            "data": "2026-09-10",
+            "descricao": "Adobe Creative Cloud",
+            "tipo": "Custos Fixos",
+            "categoria": "Softwares",
+            "valor": 129,
+            "status": "⏳ Pendente",
+            "observacao": "Plano Aplicativos Adobe"
+        },
+        {
+            "mes": "Setembro",
+            "vencimento": "2026-09-10",
+            "data": "2026-09-10",
+            "descricao": "Contador / Honorários - Isabel Almeida",
+            "tipo": "Custos Fixos",
+            "categoria": "Contabilidade",
+            "valor": 400,
+            "status": "⏳ Pendente",
+            "observacao": "Honorários Contábeis PJ"
+        },
+        {
+            "mes": "Setembro",
+            "vencimento": "2026-09-20",
+            "data": "2026-09-20",
+            "descricao": "Canva Pro",
+            "tipo": "Custos Fixos",
+            "categoria": "Softwares",
+            "valor": 47,
+            "status": "⏳ Pendente",
+            "observacao": "Assinatura Canva"
+        },
+        {
+            "mes": "Setembro",
+            "vencimento": "2026-09-15",
+            "data": "2026-09-15",
+            "descricao": "Amazon Prime / Digital",
+            "tipo": "Custos Fixos",
+            "categoria": "Serviços Digitais",
+            "valor": 54.8,
+            "status": "⏳ Pendente",
+            "observacao": "Assinatura Serviços"
+        },
+        {
+            "mes": "Setembro",
+            "vencimento": "2026-09-20",
+            "data": "2026-09-20",
+            "descricao": "DAS Simples Nacional",
+            "tipo": "Impostos e Taxas",
+            "categoria": "Impostos",
+            "valor": 0,
+            "status": "⏳ Pendente",
+            "observacao": "Aguardando apuração da contabilidade"
+        },
+        {
+            "mes": "Setembro",
+            "vencimento": "2026-09-25",
+            "data": "2026-09-25",
+            "descricao": "Renegociação PJ",
+            "tipo": "Custos Fixos",
+            "categoria": "Dívidas PJ",
+            "valor": 60,
+            "status": "⏳ Pendente",
+            "observacao": "Parcelamento PJ"
+        },
+        {
+            "mes": "Outubro",
+            "vencimento": "2026-10-10",
+            "data": "2026-10-10",
+            "descricao": "Aluguel do Estúdio (Julio Cesar Paz)",
+            "tipo": "Custos Fixos",
+            "categoria": "Estrutura",
+            "valor": 1000,
+            "status": "⏳ Pendente",
+            "observacao": "Locação Estúdio / Espaço PJ"
+        },
+        {
+            "mes": "Outubro",
+            "vencimento": "2026-10-02",
+            "data": "2026-10-02",
+            "descricao": "Google On",
+            "tipo": "Custos Fixos",
+            "categoria": "Softwares",
+            "valor": 96.99,
+            "status": "⏳ Pendente",
+            "observacao": "Armazenamento Nuvem"
+        },
+        {
+            "mes": "Outubro",
+            "vencimento": "2026-10-10",
+            "data": "2026-10-10",
+            "descricao": "Adobe Creative Cloud",
+            "tipo": "Custos Fixos",
+            "categoria": "Softwares",
+            "valor": 129,
+            "status": "⏳ Pendente",
+            "observacao": "Plano Aplicativos Adobe"
+        },
+        {
+            "mes": "Outubro",
+            "vencimento": "2026-10-10",
+            "data": "2026-10-10",
+            "descricao": "Contador / Honorários - Isabel Almeida",
+            "tipo": "Custos Fixos",
+            "categoria": "Contabilidade",
+            "valor": 400,
+            "status": "⏳ Pendente",
+            "observacao": "Honorários Contábeis PJ"
+        },
+        {
+            "mes": "Outubro",
+            "vencimento": "2026-10-20",
+            "data": "2026-10-20",
+            "descricao": "Canva Pro",
+            "tipo": "Custos Fixos",
+            "categoria": "Softwares",
+            "valor": 47,
+            "status": "⏳ Pendente",
+            "observacao": "Assinatura Canva"
+        },
+        {
+            "mes": "Outubro",
+            "vencimento": "2026-10-15",
+            "data": "2026-10-15",
+            "descricao": "Amazon Prime / Digital",
+            "tipo": "Custos Fixos",
+            "categoria": "Serviços Digitais",
+            "valor": 54.8,
+            "status": "⏳ Pendente",
+            "observacao": "Assinatura Serviços"
+        },
+        {
+            "mes": "Outubro",
+            "vencimento": "2026-10-20",
+            "data": "2026-10-20",
+            "descricao": "DAS Simples Nacional",
+            "tipo": "Impostos e Taxas",
+            "categoria": "Impostos",
+            "valor": 0,
+            "status": "⏳ Pendente",
+            "observacao": "Aguardando apuração da contabilidade"
+        },
+        {
+            "mes": "Outubro",
+            "vencimento": "2026-10-25",
+            "data": "2026-10-25",
+            "descricao": "Renegociação PJ",
+            "tipo": "Custos Fixos",
+            "categoria": "Dívidas PJ",
+            "valor": 60,
+            "status": "⏳ Pendente",
+            "observacao": "Parcelamento PJ"
+        },
+        {
+            "mes": "Novembro",
+            "vencimento": "2026-11-10",
+            "data": "2026-11-10",
+            "descricao": "Aluguel do Estúdio (Julio Cesar Paz)",
+            "tipo": "Custos Fixos",
+            "categoria": "Estrutura",
+            "valor": 1000,
+            "status": "⏳ Pendente",
+            "observacao": "Locação Estúdio / Espaço PJ"
+        },
+        {
+            "mes": "Novembro",
+            "vencimento": "2026-11-02",
+            "data": "2026-11-02",
+            "descricao": "Google On",
+            "tipo": "Custos Fixos",
+            "categoria": "Softwares",
+            "valor": 96.99,
+            "status": "⏳ Pendente",
+            "observacao": "Armazenamento Nuvem"
+        },
+        {
+            "mes": "Novembro",
+            "vencimento": "2026-11-10",
+            "data": "2026-11-10",
+            "descricao": "Adobe Creative Cloud",
+            "tipo": "Custos Fixos",
+            "categoria": "Softwares",
+            "valor": 129,
+            "status": "⏳ Pendente",
+            "observacao": "Plano Aplicativos Adobe"
+        },
+        {
+            "mes": "Novembro",
+            "vencimento": "2026-11-10",
+            "data": "2026-11-10",
+            "descricao": "Contador / Honorários - Isabel Almeida",
+            "tipo": "Custos Fixos",
+            "categoria": "Contabilidade",
+            "valor": 400,
+            "status": "⏳ Pendente",
+            "observacao": "Honorários Contábeis PJ"
+        },
+        {
+            "mes": "Novembro",
+            "vencimento": "2026-11-20",
+            "data": "2026-11-20",
+            "descricao": "Canva Pro",
+            "tipo": "Custos Fixos",
+            "categoria": "Softwares",
+            "valor": 47,
+            "status": "⏳ Pendente",
+            "observacao": "Assinatura Canva"
+        },
+        {
+            "mes": "Novembro",
+            "vencimento": "2026-11-15",
+            "data": "2026-11-15",
+            "descricao": "Amazon Prime / Digital",
+            "tipo": "Custos Fixos",
+            "categoria": "Serviços Digitais",
+            "valor": 54.8,
+            "status": "⏳ Pendente",
+            "observacao": "Assinatura Serviços"
+        },
+        {
+            "mes": "Novembro",
+            "vencimento": "2026-11-20",
+            "data": "2026-11-20",
+            "descricao": "DAS Simples Nacional",
+            "tipo": "Impostos e Taxas",
+            "categoria": "Impostos",
+            "valor": 0,
+            "status": "⏳ Pendente",
+            "observacao": "Aguardando apuração da contabilidade"
+        },
+        {
+            "mes": "Novembro",
+            "vencimento": "2026-11-25",
+            "data": "2026-11-25",
+            "descricao": "Renegociação PJ",
+            "tipo": "Custos Fixos",
+            "categoria": "Dívidas PJ",
+            "valor": 60,
+            "status": "⏳ Pendente",
+            "observacao": "Parcelamento PJ"
+        },
+        {
+            "mes": "Dezembro",
+            "vencimento": "2026-12-10",
+            "data": "2026-12-10",
+            "descricao": "Aluguel do Estúdio (Julio Cesar Paz)",
+            "tipo": "Custos Fixos",
+            "categoria": "Estrutura",
+            "valor": 1000,
+            "status": "⏳ Pendente",
+            "observacao": "Locação Estúdio / Espaço PJ"
+        },
+        {
+            "mes": "Dezembro",
+            "vencimento": "2026-12-02",
+            "data": "2026-12-02",
+            "descricao": "Google On",
+            "tipo": "Custos Fixos",
+            "categoria": "Softwares",
+            "valor": 96.99,
+            "status": "⏳ Pendente",
+            "observacao": "Armazenamento Nuvem"
+        },
+        {
+            "mes": "Dezembro",
+            "vencimento": "2026-12-10",
+            "data": "2026-12-10",
+            "descricao": "Adobe Creative Cloud",
+            "tipo": "Custos Fixos",
+            "categoria": "Softwares",
+            "valor": 129,
+            "status": "⏳ Pendente",
+            "observacao": "Plano Aplicativos Adobe"
+        },
+        {
+            "mes": "Dezembro",
+            "vencimento": "2026-12-10",
+            "data": "2026-12-10",
+            "descricao": "Contador / Honorários - Isabel Almeida",
+            "tipo": "Custos Fixos",
+            "categoria": "Contabilidade",
+            "valor": 400,
+            "status": "⏳ Pendente",
+            "observacao": "Honorários Contábeis PJ"
+        },
+        {
+            "mes": "Dezembro",
+            "vencimento": "2026-12-20",
+            "data": "2026-12-20",
+            "descricao": "Canva Pro",
+            "tipo": "Custos Fixos",
+            "categoria": "Softwares",
+            "valor": 47,
+            "status": "⏳ Pendente",
+            "observacao": "Assinatura Canva"
+        },
+        {
+            "mes": "Dezembro",
+            "vencimento": "2026-12-15",
+            "data": "2026-12-15",
+            "descricao": "Amazon Prime / Digital",
+            "tipo": "Custos Fixos",
+            "categoria": "Serviços Digitais",
+            "valor": 54.8,
+            "status": "⏳ Pendente",
+            "observacao": "Assinatura Serviços"
+        },
+        {
+            "mes": "Dezembro",
+            "vencimento": "2026-12-20",
+            "data": "2026-12-20",
+            "descricao": "DAS Simples Nacional",
+            "tipo": "Impostos e Taxas",
+            "categoria": "Impostos",
+            "valor": 0,
+            "status": "⏳ Pendente",
+            "observacao": "Aguardando apuração da contabilidade"
+        },
+        {
+            "mes": "Dezembro",
+            "vencimento": "2026-12-25",
+            "data": "2026-12-25",
+            "descricao": "Renegociação PJ",
+            "tipo": "Custos Fixos",
+            "categoria": "Dívidas PJ",
+            "valor": 60,
+            "status": "⏳ Pendente",
+            "observacao": "Parcelamento PJ"
         }
     ],
     "pessoal": [
@@ -2015,7 +2367,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-11",
             "descricao": "Água evento MR Perfect",
@@ -2025,7 +2377,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-11",
             "descricao": "Trembo Cookies",
@@ -2035,7 +2387,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-11",
             "descricao": "Água evento MR Perfect",
@@ -2045,7 +2397,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-11",
             "descricao": "Água evento MR Perfect",
@@ -2055,7 +2407,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-11",
             "descricao": "Água evento MR Perfect",
@@ -2065,7 +2417,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-11",
             "descricao": "Água evento MR Perfect",
@@ -2075,7 +2427,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-12",
             "descricao": "iFood",
@@ -2085,7 +2437,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-13",
             "descricao": "INtelisoft",
@@ -2095,7 +2447,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-13",
             "descricao": "Tina",
@@ -2105,7 +2457,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-13",
             "descricao": "Farmácia",
@@ -2115,7 +2467,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-13",
             "descricao": "Combustível",
@@ -2125,7 +2477,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-13",
             "descricao": "Sanharo Churrascaria",
@@ -2135,7 +2487,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-14",
             "descricao": "Água",
@@ -2145,7 +2497,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-14",
             "descricao": "PIX Hugo Rodrigues",
@@ -2155,7 +2507,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-14",
             "descricao": "Água",
@@ -2165,7 +2517,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-14",
             "descricao": "RD Saúde",
@@ -2175,7 +2527,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-15",
             "descricao": "Conveniência",
@@ -2185,7 +2537,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-15",
             "descricao": "Rosa/Maria 1/2",
@@ -2195,7 +2547,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-15",
             "descricao": "Mundial",
@@ -2205,7 +2557,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-15",
             "descricao": "iFood",
@@ -2215,7 +2567,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-16",
             "descricao": "Combustível",
@@ -2225,7 +2577,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-16",
             "descricao": "Casa do Biscoito",
@@ -2235,7 +2587,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-16",
             "descricao": "Farmácia / Exames",
@@ -2245,7 +2597,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-18",
             "descricao": "Vearejão do graos",
@@ -2255,7 +2607,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-19",
             "descricao": "Conveniência",
@@ -2265,7 +2617,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-19",
             "descricao": "Combustível",
@@ -2275,7 +2627,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-19",
             "descricao": "Zona Sul",
@@ -2285,7 +2637,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-20",
             "descricao": "Água",
@@ -2295,7 +2647,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-20",
             "descricao": "Combustível",
@@ -2305,7 +2657,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-21",
             "descricao": "Combustível",
@@ -2315,7 +2667,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-22",
             "descricao": "Mundial",
@@ -2325,7 +2677,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-23",
             "descricao": "Marcella Martinez",
@@ -2335,7 +2687,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-23",
             "descricao": "Conveniência",
@@ -2345,7 +2697,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-23",
             "descricao": "Tina",
@@ -2355,7 +2707,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-24",
             "descricao": "Mundial",
@@ -2365,7 +2717,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-25",
             "descricao": "Barraca da Lúcia",
@@ -2375,7 +2727,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-26",
             "descricao": "Guanabara",
@@ -2385,7 +2737,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-27",
             "descricao": "Combustível",
@@ -2395,7 +2747,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-28",
             "descricao": "Mundial",
@@ -2405,7 +2757,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-28",
             "descricao": "Aluguel",
@@ -2415,7 +2767,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-29",
             "descricao": "Mundial",
@@ -2425,7 +2777,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Abril",
             "vencimento": "",
             "data": "2026-04-30",
             "descricao": "Combustível",
@@ -2695,7 +3047,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Agosto",
             "vencimento": "",
             "data": "2026-08-01",
             "descricao": "Praia",
@@ -2705,7 +3057,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Agosto",
             "vencimento": "",
             "data": "2026-08-02",
             "descricao": "Mundial",
@@ -2715,7 +3067,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Agosto",
             "vencimento": "",
             "data": "2026-08-02",
             "descricao": "Farmahall",
@@ -2725,7 +3077,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Agosto",
             "vencimento": "",
             "data": "2026-08-03",
             "descricao": "Conveniencia - Chiclete",
@@ -2735,7 +3087,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Agosto",
             "vencimento": "",
             "data": "2026-08-03",
             "descricao": "ANB Black - Coca",
@@ -2745,7 +3097,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Agosto",
             "vencimento": "",
             "data": "2026-08-04",
             "descricao": "Conveniencia - Mentos",
@@ -2755,7 +3107,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Agosto",
             "vencimento": "",
             "data": "2026-08-05",
             "descricao": "Varejão do Grãos",
@@ -2765,7 +3117,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Agosto",
             "vencimento": "",
             "data": "2026-08-06",
             "descricao": "Gasolina",
@@ -2775,7 +3127,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Agosto",
             "vencimento": "",
             "data": "2026-08-06",
             "descricao": 8585,
@@ -2785,7 +3137,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Agosto",
             "vencimento": "",
             "data": "2026-08-06",
             "descricao": "Mundial",
@@ -2795,7 +3147,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Agosto",
             "vencimento": "",
             "data": "2026-08-06",
             "descricao": "Amazon - Pasta de Amendoim",
@@ -2805,7 +3157,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Agosto",
             "vencimento": "",
             "data": "2026-08-07",
             "descricao": "Conveniência",
@@ -2815,7 +3167,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Agosto",
             "vencimento": "",
             "data": "2026-08-08",
             "descricao": "Almoço Atitude",
@@ -2825,7 +3177,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Agosto",
             "vencimento": "",
             "data": "2026-08-10",
             "descricao": "Gasolina",
@@ -2835,7 +3187,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Agosto",
             "vencimento": "",
             "data": "2026-08-10",
             "descricao": "Conveniência",
@@ -2845,7 +3197,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Agosto",
             "vencimento": "",
             "data": "2026-08-10",
             "descricao": "Estacionamento Fórum",
@@ -2855,7 +3207,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Agosto",
             "vencimento": "",
             "data": "2026-08-11",
             "descricao": "Mundial",
@@ -2865,7 +3217,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Agosto",
             "vencimento": "",
             "data": "2026-08-11",
             "descricao": "Gasolina",
@@ -2875,7 +3227,7 @@ const INITIAL_DATA = {
             "observacao": ""
         },
         {
-            "mes": "",
+            "mes": "Agosto",
             "vencimento": "",
             "data": "2026-08-11",
             "descricao": "Conveniência",
@@ -4223,6 +4575,606 @@ const INITIAL_DATA = {
             "valor": 26.81,
             "status": "✅ Pago",
             "observacao": "14.82 + 5.00 + 6.99"
+        },
+        {
+            "mes": "Setembro",
+            "vencimento": "2026-09-10",
+            "data": "2026-09-10",
+            "descricao": "Aluguel Moradia e afins - Lucian Balin (1/2)",
+            "categoria": "Moradia",
+            "valor": 1300,
+            "status": "⏳ Pendente",
+            "observacao": "Aluguel residencial parcela 1"
+        },
+        {
+            "mes": "Setembro",
+            "vencimento": "2026-09-25",
+            "data": "2026-09-25",
+            "descricao": "Aluguel Moradia e afins - Lucian Balin (2/2)",
+            "categoria": "Moradia",
+            "valor": 700,
+            "status": "⏳ Pendente",
+            "observacao": "Aluguel residencial parcela 2"
+        },
+        {
+            "mes": "Setembro",
+            "vencimento": "2026-09-10",
+            "data": "2026-09-10",
+            "descricao": "IPTU (parcela mensal) Lusitania",
+            "categoria": "Moradia",
+            "valor": 290,
+            "status": "⏳ Pendente",
+            "observacao": "Parcela IPTU residencial"
+        },
+        {
+            "mes": "Setembro",
+            "vencimento": "2026-09-12",
+            "data": "2026-09-12",
+            "descricao": "Diarista / Limpeza - Maria Auxiliadora (1/2)",
+            "categoria": "Moradia",
+            "valor": 440,
+            "status": "⏳ Pendente",
+            "observacao": "Diárias limpeza quinzena 1"
+        },
+        {
+            "mes": "Setembro",
+            "vencimento": "2026-09-26",
+            "data": "2026-09-26",
+            "descricao": "Diarista / Limpeza - Maria Auxiliadora (2/2)",
+            "categoria": "Moradia",
+            "valor": 220,
+            "status": "⏳ Pendente",
+            "observacao": "Diária limpeza quinzena 2"
+        },
+        {
+            "mes": "Setembro",
+            "vencimento": "2026-09-26",
+            "data": "2026-09-26",
+            "descricao": "Diarista / Limpeza - Rosana Francelino",
+            "categoria": "Moradia",
+            "valor": 220,
+            "status": "⏳ Pendente",
+            "observacao": "Diária limpeza quinzena 2"
+        },
+        {
+            "mes": "Setembro",
+            "vencimento": "2026-09-05",
+            "data": "2026-09-05",
+            "descricao": "Vivo Telefonia & Internet",
+            "categoria": "Serviços",
+            "valor": 481.63,
+            "status": "⏳ Pendente",
+            "observacao": "Linha celular e internet residencial"
+        },
+        {
+            "mes": "Setembro",
+            "vencimento": "2026-09-15",
+            "data": "2026-09-15",
+            "descricao": "Ajuda Familiar (Tia via Douglas)",
+            "categoria": "Família",
+            "valor": 150,
+            "status": "⏳ Pendente",
+            "observacao": "Dinheiro enviado para a Tia via Douglas"
+        },
+        {
+            "mes": "Setembro",
+            "vencimento": "2026-09-20",
+            "data": "2026-09-20",
+            "descricao": "Ajuda Familiar (Tia via Douglas)",
+            "categoria": "Família",
+            "valor": 200,
+            "status": "⏳ Pendente",
+            "observacao": "Dinheiro enviado para a Tia via Douglas"
+        },
+        {
+            "mes": "Setembro",
+            "vencimento": "2026-09-10",
+            "data": "2026-09-10",
+            "descricao": "Nu Seguro Celular",
+            "categoria": "Serviços",
+            "valor": 66.12,
+            "status": "⏳ Pendente",
+            "observacao": "Seguro celular"
+        },
+        {
+            "mes": "Setembro",
+            "vencimento": "2026-09-24",
+            "data": "2026-09-24",
+            "descricao": "Sócio Torcedor Flamengo",
+            "categoria": "Lazer & Assinaturas",
+            "valor": 312,
+            "status": "⏳ Pendente",
+            "observacao": "Sócio torcedor CRF"
+        },
+        {
+            "mes": "Setembro",
+            "vencimento": "2026-09-24",
+            "data": "2026-09-24",
+            "descricao": "Netflix",
+            "categoria": "Lazer & Assinaturas",
+            "valor": 20.9,
+            "status": "⏳ Pendente",
+            "observacao": "Assinatura Netflix"
+        },
+        {
+            "mes": "Setembro",
+            "vencimento": "2026-09-20",
+            "data": "2026-09-20",
+            "descricao": "YouTube Premium",
+            "categoria": "Lazer & Assinaturas",
+            "valor": 25.92,
+            "status": "⏳ Pendente",
+            "observacao": "Assinatura YouTube"
+        },
+        {
+            "mes": "Setembro",
+            "vencimento": "2026-09-02",
+            "data": "2026-09-02",
+            "descricao": "Clube iFood",
+            "categoria": "Alimentação",
+            "valor": 5.95,
+            "status": "⏳ Pendente",
+            "observacao": "Assinatura Clube iFood"
+        },
+        {
+            "mes": "Setembro",
+            "vencimento": "2026-09-10",
+            "data": "2026-09-10",
+            "descricao": "Condomínio Citta America",
+            "categoria": "Moradia",
+            "valor": 51.6,
+            "status": "⏳ Pendente",
+            "observacao": "Taxa condomínio / garagem"
+        },
+        {
+            "mes": "Outubro",
+            "vencimento": "2026-10-10",
+            "data": "2026-10-10",
+            "descricao": "Aluguel Moradia e afins - Lucian Balin (1/2)",
+            "categoria": "Moradia",
+            "valor": 1300,
+            "status": "⏳ Pendente",
+            "observacao": "Aluguel residencial parcela 1"
+        },
+        {
+            "mes": "Outubro",
+            "vencimento": "2026-10-25",
+            "data": "2026-10-25",
+            "descricao": "Aluguel Moradia e afins - Lucian Balin (2/2)",
+            "categoria": "Moradia",
+            "valor": 700,
+            "status": "⏳ Pendente",
+            "observacao": "Aluguel residencial parcela 2"
+        },
+        {
+            "mes": "Outubro",
+            "vencimento": "2026-10-10",
+            "data": "2026-10-10",
+            "descricao": "IPTU (parcela mensal) Lusitania",
+            "categoria": "Moradia",
+            "valor": 290,
+            "status": "⏳ Pendente",
+            "observacao": "Parcela IPTU residencial"
+        },
+        {
+            "mes": "Outubro",
+            "vencimento": "2026-10-12",
+            "data": "2026-10-12",
+            "descricao": "Diarista / Limpeza - Maria Auxiliadora (1/2)",
+            "categoria": "Moradia",
+            "valor": 440,
+            "status": "⏳ Pendente",
+            "observacao": "Diárias limpeza quinzena 1"
+        },
+        {
+            "mes": "Outubro",
+            "vencimento": "2026-10-26",
+            "data": "2026-10-26",
+            "descricao": "Diarista / Limpeza - Maria Auxiliadora (2/2)",
+            "categoria": "Moradia",
+            "valor": 220,
+            "status": "⏳ Pendente",
+            "observacao": "Diária limpeza quinzena 2"
+        },
+        {
+            "mes": "Outubro",
+            "vencimento": "2026-10-26",
+            "data": "2026-10-26",
+            "descricao": "Diarista / Limpeza - Rosana Francelino",
+            "categoria": "Moradia",
+            "valor": 220,
+            "status": "⏳ Pendente",
+            "observacao": "Diária limpeza quinzena 2"
+        },
+        {
+            "mes": "Outubro",
+            "vencimento": "2026-10-05",
+            "data": "2026-10-05",
+            "descricao": "Vivo Telefonia & Internet",
+            "categoria": "Serviços",
+            "valor": 481.63,
+            "status": "⏳ Pendente",
+            "observacao": "Linha celular e internet residencial"
+        },
+        {
+            "mes": "Outubro",
+            "vencimento": "2026-10-15",
+            "data": "2026-10-15",
+            "descricao": "Ajuda Familiar (Tia via Douglas)",
+            "categoria": "Família",
+            "valor": 150,
+            "status": "⏳ Pendente",
+            "observacao": "Dinheiro enviado para a Tia via Douglas"
+        },
+        {
+            "mes": "Outubro",
+            "vencimento": "2026-10-20",
+            "data": "2026-10-20",
+            "descricao": "Ajuda Familiar (Tia via Douglas)",
+            "categoria": "Família",
+            "valor": 200,
+            "status": "⏳ Pendente",
+            "observacao": "Dinheiro enviado para a Tia via Douglas"
+        },
+        {
+            "mes": "Outubro",
+            "vencimento": "2026-10-10",
+            "data": "2026-10-10",
+            "descricao": "Nu Seguro Celular",
+            "categoria": "Serviços",
+            "valor": 66.12,
+            "status": "⏳ Pendente",
+            "observacao": "Seguro celular"
+        },
+        {
+            "mes": "Outubro",
+            "vencimento": "2026-10-24",
+            "data": "2026-10-24",
+            "descricao": "Sócio Torcedor Flamengo",
+            "categoria": "Lazer & Assinaturas",
+            "valor": 312,
+            "status": "⏳ Pendente",
+            "observacao": "Sócio torcedor CRF"
+        },
+        {
+            "mes": "Outubro",
+            "vencimento": "2026-10-24",
+            "data": "2026-10-24",
+            "descricao": "Netflix",
+            "categoria": "Lazer & Assinaturas",
+            "valor": 20.9,
+            "status": "⏳ Pendente",
+            "observacao": "Assinatura Netflix"
+        },
+        {
+            "mes": "Outubro",
+            "vencimento": "2026-10-20",
+            "data": "2026-10-20",
+            "descricao": "YouTube Premium",
+            "categoria": "Lazer & Assinaturas",
+            "valor": 25.92,
+            "status": "⏳ Pendente",
+            "observacao": "Assinatura YouTube"
+        },
+        {
+            "mes": "Outubro",
+            "vencimento": "2026-10-02",
+            "data": "2026-10-02",
+            "descricao": "Clube iFood",
+            "categoria": "Alimentação",
+            "valor": 5.95,
+            "status": "⏳ Pendente",
+            "observacao": "Assinatura Clube iFood"
+        },
+        {
+            "mes": "Outubro",
+            "vencimento": "2026-10-10",
+            "data": "2026-10-10",
+            "descricao": "Condomínio Citta America",
+            "categoria": "Moradia",
+            "valor": 51.6,
+            "status": "⏳ Pendente",
+            "observacao": "Taxa condomínio / garagem"
+        },
+        {
+            "mes": "Novembro",
+            "vencimento": "2026-11-10",
+            "data": "2026-11-10",
+            "descricao": "Aluguel Moradia e afins - Lucian Balin (1/2)",
+            "categoria": "Moradia",
+            "valor": 1300,
+            "status": "⏳ Pendente",
+            "observacao": "Aluguel residencial parcela 1"
+        },
+        {
+            "mes": "Novembro",
+            "vencimento": "2026-11-25",
+            "data": "2026-11-25",
+            "descricao": "Aluguel Moradia e afins - Lucian Balin (2/2)",
+            "categoria": "Moradia",
+            "valor": 700,
+            "status": "⏳ Pendente",
+            "observacao": "Aluguel residencial parcela 2"
+        },
+        {
+            "mes": "Novembro",
+            "vencimento": "2026-11-10",
+            "data": "2026-11-10",
+            "descricao": "IPTU (parcela mensal) Lusitania",
+            "categoria": "Moradia",
+            "valor": 290,
+            "status": "⏳ Pendente",
+            "observacao": "Parcela IPTU residencial"
+        },
+        {
+            "mes": "Novembro",
+            "vencimento": "2026-11-12",
+            "data": "2026-11-12",
+            "descricao": "Diarista / Limpeza - Maria Auxiliadora (1/2)",
+            "categoria": "Moradia",
+            "valor": 440,
+            "status": "⏳ Pendente",
+            "observacao": "Diárias limpeza quinzena 1"
+        },
+        {
+            "mes": "Novembro",
+            "vencimento": "2026-11-26",
+            "data": "2026-11-26",
+            "descricao": "Diarista / Limpeza - Maria Auxiliadora (2/2)",
+            "categoria": "Moradia",
+            "valor": 220,
+            "status": "⏳ Pendente",
+            "observacao": "Diária limpeza quinzena 2"
+        },
+        {
+            "mes": "Novembro",
+            "vencimento": "2026-11-26",
+            "data": "2026-11-26",
+            "descricao": "Diarista / Limpeza - Rosana Francelino",
+            "categoria": "Moradia",
+            "valor": 220,
+            "status": "⏳ Pendente",
+            "observacao": "Diária limpeza quinzena 2"
+        },
+        {
+            "mes": "Novembro",
+            "vencimento": "2026-11-05",
+            "data": "2026-11-05",
+            "descricao": "Vivo Telefonia & Internet",
+            "categoria": "Serviços",
+            "valor": 481.63,
+            "status": "⏳ Pendente",
+            "observacao": "Linha celular e internet residencial"
+        },
+        {
+            "mes": "Novembro",
+            "vencimento": "2026-11-15",
+            "data": "2026-11-15",
+            "descricao": "Ajuda Familiar (Tia via Douglas)",
+            "categoria": "Família",
+            "valor": 150,
+            "status": "⏳ Pendente",
+            "observacao": "Dinheiro enviado para a Tia via Douglas"
+        },
+        {
+            "mes": "Novembro",
+            "vencimento": "2026-11-20",
+            "data": "2026-11-20",
+            "descricao": "Ajuda Familiar (Tia via Douglas)",
+            "categoria": "Família",
+            "valor": 200,
+            "status": "⏳ Pendente",
+            "observacao": "Dinheiro enviado para a Tia via Douglas"
+        },
+        {
+            "mes": "Novembro",
+            "vencimento": "2026-11-10",
+            "data": "2026-11-10",
+            "descricao": "Nu Seguro Celular",
+            "categoria": "Serviços",
+            "valor": 66.12,
+            "status": "⏳ Pendente",
+            "observacao": "Seguro celular"
+        },
+        {
+            "mes": "Novembro",
+            "vencimento": "2026-11-24",
+            "data": "2026-11-24",
+            "descricao": "Sócio Torcedor Flamengo",
+            "categoria": "Lazer & Assinaturas",
+            "valor": 312,
+            "status": "⏳ Pendente",
+            "observacao": "Sócio torcedor CRF"
+        },
+        {
+            "mes": "Novembro",
+            "vencimento": "2026-11-24",
+            "data": "2026-11-24",
+            "descricao": "Netflix",
+            "categoria": "Lazer & Assinaturas",
+            "valor": 20.9,
+            "status": "⏳ Pendente",
+            "observacao": "Assinatura Netflix"
+        },
+        {
+            "mes": "Novembro",
+            "vencimento": "2026-11-20",
+            "data": "2026-11-20",
+            "descricao": "YouTube Premium",
+            "categoria": "Lazer & Assinaturas",
+            "valor": 25.92,
+            "status": "⏳ Pendente",
+            "observacao": "Assinatura YouTube"
+        },
+        {
+            "mes": "Novembro",
+            "vencimento": "2026-11-02",
+            "data": "2026-11-02",
+            "descricao": "Clube iFood",
+            "categoria": "Alimentação",
+            "valor": 5.95,
+            "status": "⏳ Pendente",
+            "observacao": "Assinatura Clube iFood"
+        },
+        {
+            "mes": "Novembro",
+            "vencimento": "2026-11-10",
+            "data": "2026-11-10",
+            "descricao": "Condomínio Citta America",
+            "categoria": "Moradia",
+            "valor": 51.6,
+            "status": "⏳ Pendente",
+            "observacao": "Taxa condomínio / garagem"
+        },
+        {
+            "mes": "Dezembro",
+            "vencimento": "2026-12-10",
+            "data": "2026-12-10",
+            "descricao": "Aluguel Moradia e afins - Lucian Balin (1/2)",
+            "categoria": "Moradia",
+            "valor": 1300,
+            "status": "⏳ Pendente",
+            "observacao": "Aluguel residencial parcela 1"
+        },
+        {
+            "mes": "Dezembro",
+            "vencimento": "2026-12-25",
+            "data": "2026-12-25",
+            "descricao": "Aluguel Moradia e afins - Lucian Balin (2/2)",
+            "categoria": "Moradia",
+            "valor": 700,
+            "status": "⏳ Pendente",
+            "observacao": "Aluguel residencial parcela 2"
+        },
+        {
+            "mes": "Dezembro",
+            "vencimento": "2026-12-10",
+            "data": "2026-12-10",
+            "descricao": "IPTU (parcela mensal) Lusitania",
+            "categoria": "Moradia",
+            "valor": 290,
+            "status": "⏳ Pendente",
+            "observacao": "Parcela IPTU residencial"
+        },
+        {
+            "mes": "Dezembro",
+            "vencimento": "2026-12-12",
+            "data": "2026-12-12",
+            "descricao": "Diarista / Limpeza - Maria Auxiliadora (1/2)",
+            "categoria": "Moradia",
+            "valor": 440,
+            "status": "⏳ Pendente",
+            "observacao": "Diárias limpeza quinzena 1"
+        },
+        {
+            "mes": "Dezembro",
+            "vencimento": "2026-12-26",
+            "data": "2026-12-26",
+            "descricao": "Diarista / Limpeza - Maria Auxiliadora (2/2)",
+            "categoria": "Moradia",
+            "valor": 220,
+            "status": "⏳ Pendente",
+            "observacao": "Diária limpeza quinzena 2"
+        },
+        {
+            "mes": "Dezembro",
+            "vencimento": "2026-12-26",
+            "data": "2026-12-26",
+            "descricao": "Diarista / Limpeza - Rosana Francelino",
+            "categoria": "Moradia",
+            "valor": 220,
+            "status": "⏳ Pendente",
+            "observacao": "Diária limpeza quinzena 2"
+        },
+        {
+            "mes": "Dezembro",
+            "vencimento": "2026-12-05",
+            "data": "2026-12-05",
+            "descricao": "Vivo Telefonia & Internet",
+            "categoria": "Serviços",
+            "valor": 481.63,
+            "status": "⏳ Pendente",
+            "observacao": "Linha celular e internet residencial"
+        },
+        {
+            "mes": "Dezembro",
+            "vencimento": "2026-12-15",
+            "data": "2026-12-15",
+            "descricao": "Ajuda Familiar (Tia via Douglas)",
+            "categoria": "Família",
+            "valor": 150,
+            "status": "⏳ Pendente",
+            "observacao": "Dinheiro enviado para a Tia via Douglas"
+        },
+        {
+            "mes": "Dezembro",
+            "vencimento": "2026-12-20",
+            "data": "2026-12-20",
+            "descricao": "Ajuda Familiar (Tia via Douglas)",
+            "categoria": "Família",
+            "valor": 200,
+            "status": "⏳ Pendente",
+            "observacao": "Dinheiro enviado para a Tia via Douglas"
+        },
+        {
+            "mes": "Dezembro",
+            "vencimento": "2026-12-10",
+            "data": "2026-12-10",
+            "descricao": "Nu Seguro Celular",
+            "categoria": "Serviços",
+            "valor": 66.12,
+            "status": "⏳ Pendente",
+            "observacao": "Seguro celular"
+        },
+        {
+            "mes": "Dezembro",
+            "vencimento": "2026-12-24",
+            "data": "2026-12-24",
+            "descricao": "Sócio Torcedor Flamengo",
+            "categoria": "Lazer & Assinaturas",
+            "valor": 312,
+            "status": "⏳ Pendente",
+            "observacao": "Sócio torcedor CRF"
+        },
+        {
+            "mes": "Dezembro",
+            "vencimento": "2026-12-24",
+            "data": "2026-12-24",
+            "descricao": "Netflix",
+            "categoria": "Lazer & Assinaturas",
+            "valor": 20.9,
+            "status": "⏳ Pendente",
+            "observacao": "Assinatura Netflix"
+        },
+        {
+            "mes": "Dezembro",
+            "vencimento": "2026-12-20",
+            "data": "2026-12-20",
+            "descricao": "YouTube Premium",
+            "categoria": "Lazer & Assinaturas",
+            "valor": 25.92,
+            "status": "⏳ Pendente",
+            "observacao": "Assinatura YouTube"
+        },
+        {
+            "mes": "Dezembro",
+            "vencimento": "2026-12-02",
+            "data": "2026-12-02",
+            "descricao": "Clube iFood",
+            "categoria": "Alimentação",
+            "valor": 5.95,
+            "status": "⏳ Pendente",
+            "observacao": "Assinatura Clube iFood"
+        },
+        {
+            "mes": "Dezembro",
+            "vencimento": "2026-12-10",
+            "data": "2026-12-10",
+            "descricao": "Condomínio Citta America",
+            "categoria": "Moradia",
+            "valor": 51.6,
+            "status": "⏳ Pendente",
+            "observacao": "Taxa condomínio / garagem"
         }
     ],
     "clientes": [
