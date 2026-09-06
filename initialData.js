@@ -719,7 +719,7 @@ const INITIAL_DATA = {
             "descricao": "Renegociação PJ",
             "tipo": "Custos Fixos",
             "categoria": "Custos Fixos",
-            "valor": 60,
+            "valor": 0,
             "status": "⏳ Pendente",
             "observacao": ""
         },
@@ -928,7 +928,7 @@ const INITIAL_DATA = {
             "descricao": "Renegociação PJ",
             "tipo": "Custos Fixos",
             "categoria": "Custos Fixos",
-            "valor": 60,
+            "valor": 0,
             "status": "⏳ Pendente",
             "observacao": ""
         },
@@ -1148,7 +1148,7 @@ const INITIAL_DATA = {
             "descricao": "Renegociação PJ",
             "tipo": "Custos Fixos",
             "categoria": "Dívidas PJ",
-            "valor": 60,
+            "valor": 0,
             "status": "⏳ Pendente",
             "observacao": "Parcelamento PJ"
         },
@@ -1676,7 +1676,7 @@ const INITIAL_DATA = {
             "descricao": "Renegociação PJ",
             "tipo": "Custos Fixos",
             "categoria": "Dívidas PJ",
-            "valor": 60,
+            "valor": 0,
             "status": "⏳ Pendente",
             "observacao": "Parcelamento PJ"
         },
@@ -1764,7 +1764,7 @@ const INITIAL_DATA = {
             "descricao": "Renegociação PJ",
             "tipo": "Custos Fixos",
             "categoria": "Dívidas PJ",
-            "valor": 60,
+            "valor": 0,
             "status": "⏳ Pendente",
             "observacao": "Parcelamento PJ"
         },
@@ -1852,7 +1852,7 @@ const INITIAL_DATA = {
             "descricao": "Renegociação PJ",
             "tipo": "Custos Fixos",
             "categoria": "Dívidas PJ",
-            "valor": 60,
+            "valor": 0,
             "status": "⏳ Pendente",
             "observacao": "Parcelamento PJ"
         },
@@ -1940,7 +1940,7 @@ const INITIAL_DATA = {
             "descricao": "Renegociação PJ",
             "tipo": "Custos Fixos",
             "categoria": "Dívidas PJ",
-            "valor": 60,
+            "valor": 0,
             "status": "⏳ Pendente",
             "observacao": "Parcelamento PJ"
         }
